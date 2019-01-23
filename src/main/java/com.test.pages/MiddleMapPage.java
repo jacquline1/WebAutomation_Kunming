@@ -1,13 +1,11 @@
 package com.test.pages;
 
 import com.test.basic.Functions;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class MiddleMapPage {
-    WebDriver driver;
     public static WebElement  element;
     //右侧 frame 区域
     public static WebElement rightFrame(WebDriver driver){
@@ -47,7 +45,7 @@ public class MiddleMapPage {
         Functions.highlight(driver,element);
         return element;
     }
-    //定位到的位置
+    //定位后在地图上显示的位置
     public static WebElement locatedInMap(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         element    = (WebElement) js.executeScript("var locatedInMap ="

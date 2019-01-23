@@ -4,7 +4,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class DateUpdateWindowPage {
+public class DataUpdateWindowPage {
     public static WebElement element;
     //数据上传，选择文件区域
     public static WebElement selectUpload(WebDriver driver){

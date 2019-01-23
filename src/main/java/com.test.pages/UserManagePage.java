@@ -6,9 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class UserManagePage {
     public static WebElement element;
+    // 切换 frame 进入用户管理页面
     public static void goToUserManagePage(WebDriver driver){
         LeftNavigationPage.clickAuthManage(driver);
         LeftNavigationPage.authManage_user(driver).click();
@@ -38,14 +40,7 @@ public class UserManagePage {
     public static void searchByKeyword(WebDriver driver,String keyword){
         UserManagePage.searchInputBox(driver).sendKeys(keyword);
         UserManagePage.queryBtn(driver).click();
-
     }
-    public static void searchBySelectfromList(WebDriver driver,String keyword){
-        UserManagePage.searchInputBox(driver).sendKeys(keyword);
-        UserManagePage.queryBtn(driver).click();
-
-    }
-
 
     public static WebElement addUserBtn(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -66,19 +61,19 @@ public class UserManagePage {
                 + "document.querySelectorAll('input#user-name')[0];" + "return userName");
         return element;
     }
-    public static void selectDept(WebDriver driver){
+    public static void selectDept(WebDriver driver,String value){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         element = (WebElement) js.executeScript("var dept ="
                 + "document.querySelectorAll('select#in-department')[0];" + "return dept");
         Select select = new Select(element);
-        select.selectByValue("1");
+        select.selectByValue(value);
     }
-    public static void selectRole(WebDriver driver){
+    public static void selectRole(WebDriver driver,String value){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         element = (WebElement) js.executeScript("var role ="
                 + "document.querySelectorAll('select#in-department')[0];" + "return role");
         Select select = new Select(element);
-        select.selectByValue("1");
+        select.selectByValue(value);
     }
     public static WebElement saveBtn(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -92,14 +87,14 @@ public class UserManagePage {
                 + "document.querySelectorAll('button#cancel')[0];" + "return cancelBtn");
         return element;
     }
-    public static void addUser(WebDriver driver,String realName,String userName){
+    public static void addUser(WebDriver driver,String realName,String userName,String dept,String role){
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(realName(driver)));
         realName(driver).sendKeys(realName);
         wait.until(ExpectedConditions.visibilityOf(userName(driver)));
         userName(driver).sendKeys(userName);
-        selectDept(driver);
-        selectRole(driver);
+        selectDept(driver,dept);
+        selectRole(driver,role);
         UserManagePage.saveBtn(driver).click();
     }
     public static WebElement fullNameError(WebDriver driver){
@@ -120,6 +115,66 @@ public class UserManagePage {
                 + "document.querySelectorAll('#content1 > div.modal-header > button')[0];" + "return closeBtn");
         return element;
     }
+    public static WebElement totalRecord(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var totalRecord ="
+                + "document.querySelectorAll('div.pull-left >span.pagination-info')[0];" + "return totalRecord");
+        return element;
+    }
+    //编辑、添加用户/角色/部门的窗口标题
+    public static WebElement windowTitle(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var windowTitle ="
+                + "document.querySelectorAll('h4#modal_title')[0];" + "return windowTitle");
+        return element;
+    }
+    public static void goToRoleManagePage(WebDriver driver){
+        WebDriverWait wait= new WebDriverWait(driver,10);
+        LeftNavigationPage.clickAuthManage(driver);
+        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.authManage_role(driver))).click();
+        MiddleMapPage.switchFrame(driver);
+    }
+    //添加角色，角色名
+    public static WebElement roleName(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var roleName ="
+                + "document.querySelectorAll('input#addPowerEdit')[0];" + "return roleName");
+        return element;
+    }
+    //添加角色，数据浏览复选框
+    public static WebElement checkboxDataBrowse(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var checkboxDataBrowse ="
+                + "document.querySelectorAll('div:nth-child(1) > h1 > input[type=\"checkbox\"]')[0];" + "return checkboxDataBrowse");
+        return element;
+    }
+    //添加角色，数据浏览-> 道路设施数据复选框
+    public static WebElement checkboxDataBrowse_1(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var checkboxDataBrowse_1 ="
+                + "document.querySelectorAll('div:nth-child(1) > div > h2:nth-child(1) > input[type=\"checkbox\"]')[0];" + "return checkboxDataBrowse_1");
+        return element;
+    }
+    //添加角色，查询统计复选框
+    public static WebElement checkboxQuery(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var checkboxQuery ="
+                + "document.querySelectorAll('div:nth-child(2) > h1 > input[type=\"checkbox\"]')[0];" + "return checkboxQuery");
+        return element;
+    }
+    public static void addRole(WebDriver driver,String roleName){
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        UserManagePage.addUserBtn(driver).click();
+        wait.until(ExpectedConditions.visibilityOf(UserManagePage.windowTitle(driver)));
+        Assert.assertEquals("添加角色",UserManagePage.windowTitle(driver).getText());
+        UserManagePage.roleName(driver).sendKeys(roleName);
+        UserManagePage.checkboxDataBrowse(driver).click();
+        UserManagePage.saveBtn(driver).click();
+    }
+
+
+
+
 
 
 

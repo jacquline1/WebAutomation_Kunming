@@ -8,7 +8,6 @@ public class LoginAction {
     public LoginAction(WebDriver driver){
         this.driver = driver;
     }
-
     //登录
     public void Login(String user,String pw){
         LoginPage.userName(driver).sendKeys(user);
