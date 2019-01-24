@@ -5,17 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage {
-    public static WebElement element;
-    public static WebElement userName (WebDriver driver){
-        element = driver.findElement(By.id("user"));
+   public static WebElement element;
+    public  static WebElement userName (WebDriver driver){
+         element = driver.findElement(By.id("user"));
         return element;
     }
     public static WebElement passWord(WebDriver driver){
-        element = driver.findElement(By.id("pwd"));
+          element = driver.findElement(By.id("pwd"));
         return element;
     }
     public static WebElement loginButton(WebDriver driver){
-        element = driver.findElement(By.id("btn_sub"));
+         element = driver.findElement(By.id("btn_sub"));
         return element;
     }
 

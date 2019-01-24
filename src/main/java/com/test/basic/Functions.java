@@ -1,12 +1,8 @@
 package com.test.basic;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Functions {
-    static WebDriver driver;
-    WebElement element;
     public static void highlight(WebDriver diver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) diver;
         js.executeScript("element = arguments[0];" +
@@ -48,5 +44,5 @@ public class Functions {
 //            System.out.println("ff2 nullpoint");
 //        }
 //    }
-    
+
 }

@@ -1,5 +1,6 @@
 package com.test.pages;
 
+import com.test.basic.Functions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,6 +31,13 @@ public class UserManagePage {
                 + "document.querySelectorAll('#search ul > li:nth-child(2) > input')[0];" + "return userDropList");
         return element;
     }
+    //用户下拉列表中的某个项目
+    public static WebElement itemOfUserDropList(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var itemOfUserDropList ="
+                + "document.querySelectorAll('#user > ul > li:nth-child(10)')[0];" + "return itemOfUserDropList");
+        return element;
+    }
     //查询按钮
     public static WebElement queryBtn(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -40,6 +48,10 @@ public class UserManagePage {
     public static void searchByKeyword(WebDriver driver,String keyword){
         UserManagePage.searchInputBox(driver).sendKeys(keyword);
         UserManagePage.queryBtn(driver).click();
+    }
+    public static void searchByClickDropList(WebDriver driver,WebElement element){
+        element.click();
+        Functions.highlight(driver,element);
     }
 
     public static WebElement addUserBtn(WebDriver driver){
@@ -134,7 +146,29 @@ public class UserManagePage {
         wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.authManage_role(driver))).click();
         MiddleMapPage.switchFrame(driver);
     }
-    //添加角色，角色名
+    //选择角色下拉列表
+    public static WebElement roleDropList(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var roleDropList ="
+                + "document.querySelectorAll('#search ul > li:nth-child(3) > input')[0];" + "return roleDropList");
+        return element;
+    }
+    //角色下拉列表中的某个项目
+    public static WebElement itemOfRoleList(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element = (WebElement) js.executeScript("var itemOfRoleList ="
+                + "document.querySelectorAll('#Power > ul > li:nth-child(2)')[0];" + "return itemOfRoleList");
+        return element;
+    }
+
+    //选择部门下拉列表
+    public static WebElement deptDropList(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var deptDropList ="
+                + "document.querySelectorAll('#search ul > li:nth-child(4) > input')[0];" + "return deptDropList");
+        return element;
+    }
+    //添加角色窗口，角色名
     public static WebElement roleName(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         element = (WebElement) js.executeScript("var roleName ="
@@ -171,6 +205,50 @@ public class UserManagePage {
         UserManagePage.checkboxDataBrowse(driver).click();
         UserManagePage.saveBtn(driver).click();
     }
+    public static void goToDeptManagePage(WebDriver driver){
+        WebDriverWait wait= new WebDriverWait(driver,10);
+        LeftNavigationPage.clickAuthManage(driver);
+        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.authManage_dept(driver))).click();
+        MiddleMapPage.switchFrame(driver);
+
+    }
+    //添加部门窗口，部门名称
+    public static WebElement deptName(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var deptName ="
+                + "document.querySelectorAll('input#depa-name')[0];" + "return deptName");
+        return element;
+    }
+    //添加部门窗口，部门负责人
+    public static WebElement deptResponser(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var deptResponser ="
+                + "document.querySelectorAll('input#depa-responsible')[0];" + "return deptResponser");
+        return element;
+    }
+    //添加部门窗口，上级部门
+    public static WebElement deptParent(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var deptParent ="
+                + "document.querySelectorAll('select#parent-depa')[0];" + "return deptParent");
+        return element;
+    }
+    public static void selectDeptParent(WebDriver driver,String value){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        Select select = new Select(deptParent(driver));
+        select.selectByValue(value);
+    }
+    public static void addDept(WebDriver driver,String deptName,String responser,String parentValue){
+        UserManagePage.addUserBtn(driver).click();
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(deptName(driver)));
+        deptName(driver).sendKeys(deptName);
+        deptResponser(driver).sendKeys(responser);
+        selectDeptParent(driver,parentValue);
+        saveBtn(driver).click();
+    }
+
+
 
 
 

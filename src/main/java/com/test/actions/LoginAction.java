@@ -9,7 +9,11 @@ public class LoginAction {
         this.driver = driver;
     }
     //登录
-    public void Login(String user,String pw){
+    public  void Login(String user,String pw){
+//        LoginPage lp = new LoginPage(driver);
+//        lp.userName(driver).sendKeys(user);
+//        lp.passWord(driver).sendKeys(pw);
+//        lp.loginButton(driver).click();
         LoginPage.userName(driver).sendKeys(user);
         LoginPage.passWord(driver).sendKeys(pw);
         LoginPage.loginButton(driver).click();
