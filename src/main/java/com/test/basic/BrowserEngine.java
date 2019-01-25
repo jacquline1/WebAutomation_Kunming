@@ -13,7 +13,6 @@ public class BrowserEngine {
     public String browserName;
     public String serverURL;
     WebDriver driver;
-
    public BrowserEngine(WebDriver driver){
        this.driver = driver;
    }

@@ -4,6 +4,7 @@ import com.test.basic.Functions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class MiddleMapPage {
     public static WebElement  element;
@@ -53,6 +54,43 @@ public class MiddleMapPage {
        // Functions.highlight(driver,element);
         return element;
     }
-
+    //数据版本
+    public static WebElement dataType(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var locatedInMap ="
+                + "document.querySelectorAll('select#text_data_type')[0];" + "return locatedInMap");
+         Functions.highlight(driver,element);
+        return element;
+    }
+    //从数据版本下拉列表中选择项目
+    public static String  selectFromDataTypeList(WebDriver driver,String value){
+        Select select = new Select(dataType(driver));
+        select.selectByValue(value);
+        return select.getFirstSelectedOption().getText();
+    }
+    // 图层管理
+    public static WebElement layerManagement(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var layerManagement ="
+                + "document.querySelectorAll('#layer > ul > li:nth-child(1)')[0];" + "return layerManagement");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //图层菜单上第一个开关
+    public static WebElement layerMenu1(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var layerMenu1 ="
+                + "document.querySelectorAll('#layer-management-main > ul > li:nth-child(1) > div')[0];" + "return layerMenu1");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //图层关闭按钮
+    public static WebElement layerClose(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var layerClose ="
+                + "document.querySelectorAll('span#layer-management-close')[0];" + "return layerClose");
+        Functions.highlight(driver,element);
+        return element;
+    }
 
 }

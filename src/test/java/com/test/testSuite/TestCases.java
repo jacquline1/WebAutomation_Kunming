@@ -38,6 +38,22 @@ public class TestCases {
         MiddleMapPage.locateBtn(driver).click();
         MiddleMapPage.locatedInMap(driver);
     }
+
+    /**
+     * 宏观仿真路网，选择数据版本
+     */
+    @Test
+    public void testSelectDataType_HongGuan(){
+        LeftNavigationPage.dataBrowse_hguan(driver).click();
+        MiddleMapPage.switchFrame(driver);
+        String actualText = MiddleMapPage.selectFromDataTypeList(driver,"1");
+       Assert.assertEquals(actualText,"规划路网");
+       //图层操作
+       MiddleMapPage.layerManagement(driver).click();
+       wait.until(ExpectedConditions.visibilityOf(MiddleMapPage.layerMenu1(driver))).click();
+       MiddleMapPage.layerClose(driver).click();
+       Assert.assertTrue(MiddleMapPage.layerMenu1(driver).isSelected());
+    }
     @Test
     public void testDateBrowseFolder(){
         //数据浏览 -》道路设施数据
@@ -300,9 +316,96 @@ public class TestCases {
      */
     @Test
     public void testAddDept() throws InterruptedException {
-       UserManagePage.goToDeptManagePage(driver);
-       UserManagePage.addDept(driver,"部门1","负责人1","1");
-       Functions.acceptAlert(driver);
+        UserManagePage.goToDeptManagePage(driver);
+        UserManagePage.addUserBtn(driver).click();
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(UserManagePage.deptName(driver)));
+        UserManagePage.addDept(driver,"部门2","负责人2","1");
+        Functions.acceptAlert(driver);
+    }
+    /**
+     * 添加部门，部门名称字段验证
+     */
+    @Test
+    public void testVerifyDeptNameField(){
+        UserManagePage.goToDeptManagePage(driver);
+        UserManagePage.addUserBtn(driver).click();
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(UserManagePage.deptName(driver)));
+        UserManagePage.saveBtn(driver).click();
+        Assert.assertEquals("部门名称不能为空!",UserManagePage.deptNameError(driver).getText());
+        UserManagePage.deptName(driver).sendKeys("abcdefghigk");
+        UserManagePage.saveBtn(driver).click();
+        Assert.assertEquals("部门名称的最小长度:2, 最大长度:10!",UserManagePage.deptNameError(driver).getText());
+        UserManagePage.deptName(driver).clear();
+        UserManagePage.deptName(driver).sendKeys("a");
+        UserManagePage.saveBtn(driver).click();
+        Assert.assertEquals("部门名称的最小长度:2, 最大长度:10!",UserManagePage.deptNameError(driver).getText());
+        UserManagePage.cancelBtn(driver).click();
+    }
+    /**
+     * 按输入的关键字，查询部门
+     */
+    @Test
+    public void testInputKeywordAndSearchDept(){
+        UserManagePage.goToDeptManagePage(driver);
+        UserManagePage.searchByKeyword(driver,"部门1");
+        Assert.assertEquals("显示第 1 到第 1 条记录，总共 1 条记录",UserManagePage.totalRecord(driver).getText());
+    }
+    /**
+     * 从下拉列表中选择，查询部门
+     */
+    @Test
+    public void testSelectFromDropListAndSearchDept(){
+        UserManagePage.goToDeptManagePage(driver);
+        UserManagePage.deptDropList(driver).click();
+        Functions.highlight(driver,UserManagePage.deptDropList(driver));
+        UserManagePage.searchByClickDropList(driver,UserManagePage.itemOfDeptList(driver));
+        wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(UserManagePage.totalRecord(driver)));
+        Assert.assertEquals("显示第 1 到第 1 条记录，总共 1 条记录",UserManagePage.totalRecord(driver).getText());
+
+    }
+    /**
+     * 编辑部门
+     */
+    @Test
+    public void testEditDept() throws InterruptedException {
+        UserManagePage.goToDeptManagePage(driver);
+        //定位编辑按钮：表格的第 6 行第 6 列的单元格内
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element = (WebElement) js.executeScript("var editBtn ="
+                + "document.querySelectorAll('tr:nth-child(6) > td:nth-child(6) > a.edit.ml10')[0];" + "return editBtn");
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        //修改信息
+        wait.until(ExpectedConditions.visibilityOf(UserManagePage.deptName(driver)));
+        UserManagePage.addDept(driver,"updateName","newRespons","3");
+        //保存后验证
+        Functions.acceptAlert(driver);
+    }
+    /**
+     * 删除部门
+     */
+    @Test
+    public void testDeleteDept() throws InterruptedException {
+        UserManagePage.goToDeptManagePage(driver);
+        //删除前的总数
+        WebElement table = driver.findElement(By.id("table"));
+        int beforeDelete = new Table(table).getRowCount();
+        //定位删除按钮：表格的第 6 行第 6 列的单元格内
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement removeBtn = (WebElement) js.executeScript("var removeBtn ="
+                + "document.querySelectorAll('tr:nth-child(6) > td:nth-child(6) > a.remove.ml10')[0];" + "return removeBtn");
+        wait.until(ExpectedConditions.elementToBeClickable(removeBtn)).click();
+        // 取消删除
+        Functions.dismissAlert(driver);
+        //确认删除
+        wait.until(ExpectedConditions.elementToBeClickable(removeBtn)).click();
+        Functions.acceptAlert(driver);
+        Functions.acceptAlert(driver);
+        //删除后的用户总数
+        int afterDelete = new Table(table).getRowCount();
+        Assert.assertEquals(afterDelete,beforeDelete-1);
     }
 
     @Test
@@ -337,10 +440,13 @@ public class TestCases {
         System.out.println("links" + links);
         assertEquals(33, links);
 
-        WebElement bd = (WebElement) js.executeScript("var bd ="
-                + "document.getElementById('kw');"
-                + "return bd");
-        bd.sendKeys("abc");
+//        WebElement bd = (WebElement) js.executeScript("var bd ="
+//                + "document.getElementById('kw');"
+//                + "return bd");
+//        bd.sendKeys("abc");
+WebElement inputBox = driver.findElement(By.id("'kw'"));
+        js.executeScript("$(arguments[0]).fadeOut();", inputBox);
+        inputBox.sendKeys("abc");
     }
     @Test
     public void testBaiduMap(){

@@ -212,6 +212,13 @@ public class UserManagePage {
         MiddleMapPage.switchFrame(driver);
 
     }
+    //部门下拉列表中的某个项目
+    public static WebElement itemOfDeptList(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element = (WebElement) js.executeScript("var itemOfRoleList ="
+                + "document.querySelectorAll('#department> ul > li:nth-child(2)')[0];" + "return itemOfRoleList");
+        return element;
+    }
     //添加部门窗口，部门名称
     public static WebElement deptName(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -219,6 +226,14 @@ public class UserManagePage {
                 + "document.querySelectorAll('input#depa-name')[0];" + "return deptName");
         return element;
     }
+    //添加部门窗口，部门名称
+    public static WebElement deptNameError(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var deptNameError ="
+                + "document.querySelectorAll('label#depa-name-error')[0];" + "return deptNameError");
+        return element;
+    }
+
     //添加部门窗口，部门负责人
     public static WebElement deptResponser(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -239,10 +254,9 @@ public class UserManagePage {
         select.selectByValue(value);
     }
     public static void addDept(WebDriver driver,String deptName,String responser,String parentValue){
-        UserManagePage.addUserBtn(driver).click();
-        WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.visibilityOf(deptName(driver)));
+        deptName(driver).clear();
         deptName(driver).sendKeys(deptName);
+        deptResponser(driver).clear();
         deptResponser(driver).sendKeys(responser);
         selectDeptParent(driver,parentValue);
         saveBtn(driver).click();
