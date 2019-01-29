@@ -24,7 +24,7 @@ import java.io.IOException;
 import static org.testng.Assert.assertEquals;
 public class TestCases {
     WebDriver driver = new ChromeDriver();
-    WebDriverWait wait = new WebDriverWait(driver,10);
+    WebDriverWait wait = new WebDriverWait(driver,20);
     @BeforeClass
     public void setUP() throws InterruptedException {
         driver.manage().window().maximize();
@@ -36,12 +36,12 @@ public class TestCases {
      * 数据浏览,输入路名并定位
      */
     @Test
-    public void testInputRoadNameAndLocate(){
+    public void testInputRoadNameAndLocate() throws InterruptedException {
         MiddleMapPage.switchFrame(driver);
-        Assert.assertEquals(MiddleMapPage.roadTitle(driver).getText(),"道路设施数据");
-        MiddleMapPage.inputRoadName(driver,"吴井路");
-        MiddleMapPage.locateBtn(driver).click();
-        MiddleMapPage.locatedInMap(driver);
+        Assert.assertEquals(MiddleMapPage.pageTitle(driver).getText(),"道路设施数据");
+        MiddleMapPage.inputRoadNameAndLocate(driver,"吴井路");
+        Thread.sleep(3000);
+        Assert.assertTrue(MiddleMapPage.locatedInMap(driver).isDisplayed());
         driver.switchTo().defaultContent();
     }
 
@@ -91,10 +91,36 @@ public class TestCases {
         LeftNavigationPage.query_danti(driver).click();
         MiddleMapPage.switchFrame(driver);
         MiddleMapPage.selectFromDataTypeList(driver,"2");
-        //面积测试
+        //面积测量
         MiddleMapPage.areaMeasure(driver).click();
         MiddleMapPage.dragAndDropInMap(driver);
         Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(MiddleMapPage.measureTitle(driver))).isDisplayed());
+        driver.switchTo().defaultContent();
+    }
+    /**
+     * 条件查询，输入查询条件后，在查询结果中定位
+     */
+    @Test
+    public void testConditionQueryAndLocate() throws InterruptedException {
+        LeftNavigationPage.clickQuery(driver);
+        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.query_tiaojian(driver))).click();
+        MiddleMapPage.switchFrame(driver);
+        MiddleMapPage.queryBtn(driver).click();
+        //选择道路等级下的复选框
+        MiddleMapPage.roadLevel(driver).click();
+        MiddleMapPage.oneItemOfRoadLevel(driver).click();
+        //输入车道数
+        MiddleMapPage.cheDaoShu1(driver).sendKeys("2");
+        MiddleMapPage.cheDaoShu2(driver).sendKeys("4");
+        //输入路段长度
+        MiddleMapPage.roadLong1(driver).sendKeys("1000");
+        MiddleMapPage.roadLong2(driver).sendKeys("2000");
+        //点击查询
+        MiddleMapPage.queryBtnOfOpenedWind(driver).click();
+        wait.until(ExpectedConditions.visibilityOf(MiddleMapPage.loateBtnInTable(driver)));
+        MiddleMapPage.loateBtnInTable(driver).click();
+        Thread.sleep(3000);
+        Assert.assertTrue(MiddleMapPage.locatedInMap(driver).isDisplayed());
         driver.switchTo().defaultContent();
     }
     /**
@@ -115,19 +141,31 @@ public class TestCases {
         DataUpdateWindowPage.importBtn(driver).click();
     }
     /**
-     *自定义导出页面，选择数据类型版本后进行长度测量
+     *全部导出页面，选择数据类型版本后进行长度测量
      */
     @Test
-    public void testDataExport() throws IOException {
+    public void testSelectDataTypeAndMeasureInDataExport() throws IOException {
         //自定义范围导出界面，选择数据类型
         LeftNavigationPage.clickDataExport(driver);
-        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.dataExport_custom(driver))).click();
+        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.dataExport_all(driver))).click();
         MiddleMapPage.switchFrame(driver);
         MiddleMapPage.selectFromDataTypeList(driver,"1");
         //长度测量
         MiddleMapPage.distanceMeasure(driver).click();
         MiddleMapPage.dragAndDropInMap(driver);
         Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(MiddleMapPage.measureTitle(driver))).isDisplayed());
+        driver.switchTo().defaultContent();
+    }
+    /**
+     * 数据导出,输入路名并定位
+     */
+    @Test
+    public void testInputRoadNameAndLocateInDataExport(){
+        LeftNavigationPage.clickDataExport(driver);
+        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.dataExport_custom(driver))).click();
+        MiddleMapPage.switchFrame(driver);
+        Assert.assertEquals(MiddleMapPage.pageTitle(driver).getText(),"自定义范围导出");
+        MiddleMapPage.inputRoadNameAndLocate(driver,"吴井路");
         driver.switchTo().defaultContent();
     }
     /**
@@ -161,17 +199,15 @@ public class TestCases {
      * 成功添加用户
      */
     @Test
-    public void testAddUserPass() throws InterruptedException {
+    @Parameters({"realName","userName"})
+    public void testAddUserPass(String realName,String userName) throws InterruptedException {
         UserManagePage.goToUserManagePage(driver);
-        WebElement table = driver.findElement(By.id("table"));
-        int beforeRowNo = new Table(table).getRowCount();
-        System.out.println("添加用户前总用户数为：" + beforeRowNo);
         UserManagePage.addUserBtn(driver).click();
-        UserManagePage.addUser(driver,"test1","test1","1","1");
+        UserManagePage.addUser(driver,realName,userName,"1","1");
         Functions.acceptAlert(driver);
-        int afterRowNo = new Table(table).getRowCount();
-        System.out.println("添加成功后用户数为：" + afterRowNo);
-        Assert.assertEquals(afterRowNo,beforeRowNo+1);
+        //验证添加的记录可搜索到
+        UserManagePage.searchByKeyword(driver,"test1");
+        Assert.assertEquals("显示第 1 到第 1 条记录，总共 1 条记录",UserManagePage.totalRecord(driver).getText());
         driver.switchTo().defaultContent();
     }
     /**
@@ -221,11 +257,7 @@ public class TestCases {
         UserManagePage.selectRole(driver,"0");
         UserManagePage.selectDept(driver,"0");
         UserManagePage.saveBtn(driver).click();
-        Thread.sleep(4000);
-        Robot robot = new Robot();
-        robot.keyPress(KeyEvent.VK_SPACE);
-        robot.keyRelease(KeyEvent.VK_SPACE);
-        Thread.sleep(2000);
+        Functions.acceptAlertViaRobot();
         driver.switchTo().defaultContent();
     }
     /**
@@ -240,7 +272,11 @@ public class TestCases {
         //定位删除按钮：表格的第 9 行第 6 列的单元格内
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement removeBtn = (WebElement) js.executeScript("var removeBtn ="
-                + "document.querySelectorAll('tr:nth-child(9) > td:nth-child(6) > a.remove.ml10')[0];" + "return removeBtn");
+                + "document.querySelectorAll('tr:nth-child(10) > td:nth-child(6) > a.remove.ml10')[0];" + "return removeBtn");
+        // 获得要删除的用户名
+      //  String toDelete = new Table(table).getCellText("//*[@id='table']/tbody",10,2);
+        String toDelete = driver.findElement(By.xpath("//*[@id=\"table\"]/tbody/tr[10]/td[2]")).getText();
+        System.out.println("要删除的是：" + toDelete);
         wait.until(ExpectedConditions.elementToBeClickable(removeBtn)).click();
         // 取消删除
         Functions.dismissAlert(driver);
@@ -249,8 +285,10 @@ public class TestCases {
         Functions.acceptAlert(driver);
         Functions.acceptAlert(driver);
         //删除后的用户总数
-        int afterDelete = new Table(table).getRowCount();
-        Assert.assertEquals(afterDelete,beforeDelete-1);
+//        int afterDelete = new Table(table).getRowCount();
+//////        Assert.assertEquals(afterDelete,beforeDelete-1);
+        UserManagePage.searchByKeyword(driver,toDelete);
+        Assert.assertEquals("没有找到匹配的记录",UserManagePage.noResult(driver).getText());
         driver.switchTo().defaultContent();
     }
 
@@ -263,7 +301,6 @@ public class TestCases {
         UserManagePage.addRole(driver,"测试角色0");
         Functions.acceptAlert(driver);
         driver.switchTo().defaultContent();
-
     }
     /**
      * 按输入的关键字，查询角色
@@ -307,6 +344,37 @@ public class TestCases {
         Functions.acceptAlert(driver);
         driver.switchTo().defaultContent();
     }
+
+    /**
+     *用户角色页面，分页功能验证
+     */
+    @Test
+    public void testFenYeInUserRole() throws AWTException, InterruptedException {
+        UserManagePage.goToRoleManagePage(driver);
+        WebElement table = driver.findElement(By.id("table"));
+        int rowNo = new Table(table).getRowCount()-1;
+        while (rowNo<10){
+            UserManagePage.addRole(driver,"role"+ rowNo);
+            Functions.acceptAlertViaRobot();
+            rowNo = new Table(table).getRowCount()-1;
+        }
+        UserManagePage.addRole(driver,"role"+ rowNo);
+        Functions.acceptAlertViaRobot();
+        //点击第2页
+        UserManagePage.secondPage(driver).click();
+        Assert.assertEquals(2,new Table(table).getRowCount());
+        //点击下一页
+        UserManagePage.nextPage(driver).click();
+        Assert.assertEquals(11,new Table(table).getRowCount());
+        //点击上一页
+        UserManagePage.prePage(driver).click();
+        Assert.assertEquals(2,new Table(table).getRowCount());
+        //选择每页显示行数
+        UserManagePage.numberOfOnePage(driver).click();
+        UserManagePage.selectDisplayedNo(driver).click();
+        Assert.assertEquals(12,new Table(table).getRowCount());
+        driver.switchTo().defaultContent();
+    }
     /**
      * 删除角色
      */
@@ -316,6 +384,7 @@ public class TestCases {
         //删除前的总数
         WebElement table = driver.findElement(By.id("table"));
         int beforeDelete = new Table(table).getRowCount();
+        System.out.println("删除前的总数：" + beforeDelete);
         //定位删除按钮：表格的第 9 行第 4 列的单元格内
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement removeBtn = (WebElement) js.executeScript("var removeBtn ="
@@ -329,6 +398,7 @@ public class TestCases {
         Functions.acceptAlert(driver);
         //删除后的用户总数
         int afterDelete = new Table(table).getRowCount();
+        System.out.println("删除后的总数：" + afterDelete);
         Assert.assertEquals(afterDelete,beforeDelete-1);
         driver.switchTo().defaultContent();
     }

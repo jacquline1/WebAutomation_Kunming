@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.io.IOException;
 
@@ -21,8 +22,8 @@ public class MiddleMapPage {
     public static void switchFrame(WebDriver driver){
         driver.switchTo().frame(rightFrame(driver));
     }
-    //右侧，道路设施数据标题
-    public static WebElement roadTitle(WebDriver driver){
+    //右侧，页面标题
+    public static WebElement pageTitle(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         element    = (WebElement) js.executeScript("var roadTitle ="
                 + "document.querySelectorAll('#full_box > div.top_div > a')[0];" + "return roadTitle");
@@ -55,6 +56,82 @@ public class MiddleMapPage {
                 + "document.querySelectorAll('#map_graphics_layer > path')[0];" + "return locatedInMap");
        // Functions.highlight(driver,element);
         return element;
+    }
+    //查询按钮
+    public static WebElement queryBtn(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var queryBtn ="
+                + "document.querySelectorAll('button#query-btn')[0];" + "return queryBtn");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //点击查询按钮后,道路等级
+    public static WebElement roadLevel(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var roadLevel ="
+                + "document.querySelectorAll('select#lang1')[0];" + "return roadLevel");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //道路等级菜单下的某一项
+    public static WebElement oneItemOfRoadLevel(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var oneItemOfRoadLevel ="
+                + "document.querySelectorAll('#ck1 > li:nth-child(1) > label')[0];" + "return oneItemOfRoadLevel");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //点击查询按钮后，车道数1
+    public static WebElement cheDaoShu1(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var cheDaoShu1 ="
+                + "document.querySelectorAll('input#s_lane')[0];" + "return cheDaoShu1");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //点击查询按钮后，车道数2
+    public static WebElement cheDaoShu2(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var cheDaoShu2 ="
+                + "document.querySelectorAll('input#m_lane')[0];" + "return cheDaoShu2");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //点击查询按钮后，路段长度1
+    public static WebElement roadLong1(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var roadLong1 ="
+                + "document.querySelectorAll('input#s_link_len')[0];" + "return roadLong1");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //点击查询按钮后，路段长度2
+    public static WebElement roadLong2(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var roadLong2 ="
+                + "document.querySelectorAll('input#m_link_len')[0];" + "return roadLong2");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //点击查询按钮后，定位按钮
+    public static WebElement loateBtnInTable(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var loateBtnInTable ="
+                + "document.querySelectorAll('#table > tbody > tr:nth-child(1) > td:nth-child(8) > a')[0];" + "return loateBtnInTable");
+    //   Functions.highlight(driver,element);
+        return element;
+    }
+    //点击查询按钮后，弹出窗口上的查询按钮
+    public static WebElement queryBtnOfOpenedWind(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var queryBtnOfOpenedWind ="
+                + "document.querySelectorAll('div.btn#query')[0];" + "return queryBtnOfOpenedWind");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    public static void inputRoadNameAndLocate(WebDriver driver,String roadName){
+        MiddleMapPage.inputRoadName(driver,roadName);
+        MiddleMapPage.locateBtn(driver).click();
     }
     //数据版本
     public static WebElement dataType(WebDriver driver){

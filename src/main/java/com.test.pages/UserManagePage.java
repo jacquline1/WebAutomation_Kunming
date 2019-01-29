@@ -58,7 +58,7 @@ public class UserManagePage {
     public static WebElement addUserBtn(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
          element = (WebElement) js.executeScript("var addUserBtn ="
-                     + "document.getElementById('add');" + "return addUserBtn");
+                     + "document.querySelectorAll('span#add')[0];" + "return addUserBtn");
          return element;
     }
 
@@ -199,12 +199,55 @@ public class UserManagePage {
     }
     public static void addRole(WebDriver driver,String roleName){
         WebDriverWait wait = new WebDriverWait(driver,10);
-        UserManagePage.addUserBtn(driver).click();
+        wait.until(ExpectedConditions.elementToBeClickable(UserManagePage.addUserBtn(driver))).click();
         wait.until(ExpectedConditions.visibilityOf(UserManagePage.windowTitle(driver)));
         Assert.assertEquals("添加角色",UserManagePage.windowTitle(driver).getText());
+        UserManagePage.roleName(driver).clear();
         UserManagePage.roleName(driver).sendKeys(roleName);
         UserManagePage.checkboxDataBrowse(driver).click();
         UserManagePage.saveBtn(driver).click();
+    }
+    //分页，前一页
+    public static WebElement prePage(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var prePage ="
+                + "document.querySelectorAll('div.pull-right.pagination > ul > li> a')[0];" + "return prePage");
+        return element;
+    }
+    //分页，第一页
+    public static WebElement firstPage(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var firstPage ="
+                + "document.querySelectorAll(' div.pull-right.pagination > ul > li> a')[1];" + "return firstPage");
+        return element;
+    }
+    //分页，第一页
+    public static WebElement secondPage(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var secondPage ="
+                + "document.querySelectorAll('div.pull-right.pagination > ul > li> a')[2];" + "return secondPage");
+        return element;
+    }
+    //分页，下一页
+    public static WebElement nextPage(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var nextPage ="
+                + "document.querySelectorAll('div.pull-right.pagination > ul > li> a')[3];" + "return nextPage");
+        return element;
+    }
+    //分页，每页显示行数
+    public static WebElement numberOfOnePage(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var numberOfOnePage ="
+                + "document.querySelectorAll('span > button')[0];" + "return numberOfOnePage");
+        return element;
+    }
+    //分页，行数菜单选择25行
+    public static WebElement selectDisplayedNo(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var selectDisplayedNo ="
+                + "document.querySelectorAll('span > ul > li:nth-child(2) > a')[0];" + "return selectDisplayedNo");
+        return element;
     }
     public static void goToDeptManagePage(WebDriver driver){
         WebDriverWait wait= new WebDriverWait(driver,10);
@@ -262,7 +305,13 @@ public class UserManagePage {
         selectDeptParent(driver,parentValue);
         saveBtn(driver).click();
     }
-
+    //查询后无匹配结果
+    public static WebElement noResult(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element = (WebElement) js.executeScript("var noResult ="
+                + "document.querySelectorAll('#table > tbody > tr > td')[0];" + "return noResult");
+        return element;
+    }
 
 
 

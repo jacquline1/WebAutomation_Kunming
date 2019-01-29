@@ -2,6 +2,9 @@ package com.test.basic;
 
 import org.openqa.selenium.*;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 public class Functions {
     public static void highlight(WebDriver diver, WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) diver;
@@ -24,6 +27,13 @@ public class Functions {
         Thread.sleep(2000);
         alert.accept();
         Thread.sleep(2000);
+    }
+    public static void acceptAlertViaRobot() throws InterruptedException, AWTException {
+        Thread.sleep(4000);
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_SPACE);
+        robot.keyRelease(KeyEvent.VK_SPACE);
+        Thread.sleep(4000);
     }
 
 //    public static void alertAccept1() {

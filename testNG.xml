@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><!-- Test -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="classes">
-<test verbose="2" preserve-order="true" name="TestDebug">
+    <parameter name="realName"  value="test1"/>
+    <parameter name="userName"  value="test1"/>
+<test verbose="2" preserve-order="true" name="TestJZDT">
+
  <classes>
 <class name="com.test.testSuite.Login" >
      <methods>
@@ -15,7 +18,9 @@
              <include name = "testSelectDataType_HongGuan"/>
              <include name = "testDataBrowseFolder"/>
              <include name = "testSelectDataTypeAndAreaMeasureInDataQueryFolder"/>
-             <include name = "testDataExport"/>
+             <include name = "testConditionQueryAndLocate"/>
+             <include name = "testSelectDataTypeAndMeasureInDataExport"/>
+             <include name = "testInputRoadNameAndLocateInDataExport"/>
              <include name = "testAddUserFiledNotNull"/>
              <include name = "testAddUserFieldLength"/>
              <include name = "testAddUserPass"/>
@@ -27,6 +32,7 @@
              <include name = "testInputKeywordAndSearchRole"/>
              <include name = "testSelectFromDropListAndSearchRole"/>
              <include name = "testEditRole"/>
+             <include name = "testFenYeInUserRole"/>
              <include name = "testDeleteRole"/>
              <include name = "testAddDept"/>
              <include name = "testVerifyDeptNameField"/>
