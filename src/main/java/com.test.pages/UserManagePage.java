@@ -13,8 +13,9 @@ public class UserManagePage {
     public static WebElement element;
     // 切换 frame 进入用户管理页面
     public static void goToUserManagePage(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,10);
         LeftNavigationPage.clickAuthManage(driver);
-        LeftNavigationPage.authManage_user(driver).click();
+        wait.until(ExpectedConditions.elementToBeClickable(LeftNavigationPage.authManage_user(driver))).click();
         MiddleMapPage.switchFrame(driver);
     }
     //查询内容输入框

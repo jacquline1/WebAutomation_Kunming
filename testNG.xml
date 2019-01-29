@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><!-- Test -->
+<suite name="Suite" parallel="classes">
+<test verbose="2" preserve-order="true" name="TestDebug">
+ <classes>
+<class name="com.test.testSuite.Login" >
+     <methods>
+         <include name ="logPass"/>
+         <include name ="afterMethod"/>
+     </methods>
+</class>
+     <class name="com.test.testSuite.TestCases">
+         <methods>
+             <include name = "testInputRoadNameAndLocate"/>
+             <include name = "testSelectDataType_HongGuan"/>
+             <include name = "testDataBrowseFolder"/>
+             <include name = "testSelectDataTypeAndAreaMeasureInDataQueryFolder"/>
+             <include name = "testDataExport"/>
+             <include name = "testAddUserFiledNotNull"/>
+             <include name = "testAddUserFieldLength"/>
+             <include name = "testAddUserPass"/>
+             <include name = "testInputKeywordAndSearchUser"/>
+             <include name = "testSelectFromDropListAndSearchUser"/>
+             <include name = "testEditUser"/>
+             <include name = "testDeleteUser"/>
+             <include name = "testAddRolePass"/>
+             <include name = "testInputKeywordAndSearchRole"/>
+             <include name = "testSelectFromDropListAndSearchRole"/>
+             <include name = "testEditRole"/>
+             <include name = "testDeleteRole"/>
+             <include name = "testAddDept"/>
+             <include name = "testVerifyDeptNameField"/>
+             <include name = "testInputKeywordAndSearchDept"/>
+             <include name = "testSelectFromDropListAndSearchDept"/>
+             <include name = "testEditDept"/>
+             <include name = "testDeleteDept"/>
+
+         </methods>
+     </class>
+</classes>
+</test> <!-- Test -->
+</suite> <!-- Suite -->

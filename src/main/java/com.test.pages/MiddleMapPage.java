@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
+
 public class MiddleMapPage {
     public static WebElement  element;
     //右侧 frame 区域
@@ -59,7 +61,7 @@ public class MiddleMapPage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         element    = (WebElement) js.executeScript("var locatedInMap ="
                 + "document.querySelectorAll('select#text_data_type')[0];" + "return locatedInMap");
-         Functions.highlight(driver,element);
+//         Functions.highlight(driver,element);
         return element;
     }
     //从数据版本下拉列表中选择项目
@@ -92,5 +94,50 @@ public class MiddleMapPage {
         Functions.highlight(driver,element);
         return element;
     }
+    //面积测量
+    public static WebElement areaMeasure(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var areaMeasure ="
+                + "document.querySelectorAll('li#brightdata_measure')[0];" + "return areaMeasure");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //距离测量
+    public static WebElement distanceMeasure(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var distanceMeasure ="
+                + "document.querySelectorAll('li#brightdata_measure')[1];" + "return distanceMeasure");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //放大
+    public static WebElement max(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var max ="
+                + "document.querySelectorAll('#layer > ul > li:nth-child(4)')[0];" + "return max");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //缩小
+    public static WebElement min(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var min ="
+                + "document.querySelectorAll('#layer > ul > li:nth-child(5)')[0];" + "return min");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //面积,长度测量窗口标题
+    public static WebElement measureTitle(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var measureTitle ="
+                + "document.querySelectorAll('.esriPopupWrapper > div:nth-child(1) > div > div.title')[0];" + "return measureTitle");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    public static void dragAndDropInMap(WebDriver driver) throws IOException {
+        Runtime.getRuntime().exec("D:\\dragAndDropOnMap.exe");
+        Functions.highlight(driver,MiddleMapPage.measureTitle(driver));
+    }
+
 
 }

@@ -18,5 +18,10 @@ public class LoginPage {
          element = driver.findElement(By.id("btn_sub"));
         return element;
     }
+    //退出按钮
+    public static WebElement logoutButton(WebDriver driver){
+        element = driver.findElement(By.id("top-exit"));
+        return element;
+    }
 
 }

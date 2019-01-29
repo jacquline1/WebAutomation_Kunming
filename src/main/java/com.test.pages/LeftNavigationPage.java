@@ -49,6 +49,7 @@ public class LeftNavigationPage {
                 + "document.querySelectorAll('#p > h1.Menu_shadow > a')[0];" + "return query");
         return element;
     }
+    //点击查询统计，展开菜单
     public static void clickQuery(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String l = "$('#p > h1:nth-child(3) > a').click()";
@@ -76,7 +77,7 @@ public class LeftNavigationPage {
         return element;
     }
     //数据更新 -》数据更新
-    public static void clickDateUpdate(WebDriver driver){
+    public static void clickDataUpdate(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String gx = "$('#p > h1:nth-child(5) > a').click()";
         js.executeScript(gx);
@@ -95,6 +96,14 @@ public class LeftNavigationPage {
                 + "document.querySelectorAll('div.no h2')[8];" + "return dataUpdate_recover");
         return element;
     }
+    //点击数据导出，展开菜单
+    public static void clickDataExport(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String gx = "$('#p > h1:nth-child(7) > a').click()";
+        js.executeScript(gx);
+    }
+
+
     //数据导出 -》全部导出
     public static WebElement dataExport_all(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -109,7 +118,7 @@ public class LeftNavigationPage {
                 + "document.querySelectorAll('div.no h2')[10];" + "return dataExport_custom");
         return element;
     }
-    //权限管理，展开菜单
+    //点击权限管理，展开菜单
     public static void clickAuthManage(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String auth = "$('h1:nth-child(9) > a').click()";
