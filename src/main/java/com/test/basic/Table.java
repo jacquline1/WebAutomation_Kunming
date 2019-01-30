@@ -39,11 +39,10 @@ public class Table {
     }
     //返回指定单元格中的内容
     public String getCellText(String locator,int rowNo,int colNo){
-        String xpath = locator +            "/tr[" + rowNo  +"]/td[" + colNo + "]";
-                       //  /tr[2]/td[2]
+        String xpath = locator +  "/tr[" + rowNo  +"]/td[" + colNo + "]";
        // WebElement cell = driver.findElement(By.xpath("//*[@id='table']/tbody/tr[2]/td[2]"));
-        WebElement cell = driver.findElement(By.xpath(xpath));
-        return cell.getText();
+        return driver.findElement(By.xpath(xpath)).getText();
+        //return cell.getText();
     }
     //遍历表中的所有内容
     public void printContentsInTable(){

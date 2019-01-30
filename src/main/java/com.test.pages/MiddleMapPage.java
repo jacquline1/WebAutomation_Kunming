@@ -215,6 +215,12 @@ public class MiddleMapPage {
         Runtime.getRuntime().exec("D:\\dragAndDropOnMap.exe");
         Functions.highlight(driver,MiddleMapPage.measureTitle(driver));
     }
-
+    public static WebElement exitBtn(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var exitBtn ="
+                + "document.querySelectorAll('div#top-exit')[0];" + "return exitBtn");
+        Functions.highlight(driver,element);
+        return element;
+    }
 
 }

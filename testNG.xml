@@ -3,8 +3,10 @@
 <suite name="Suite" parallel="classes">
     <parameter name="realName"  value="test1"/>
     <parameter name="userName"  value="test1"/>
+    <parameter name="roleName"  value="roleName"/>
+    <parameter name="deptName"  value="testDept"/>
+    <parameter name="parentName"  value="testSpon"/>
 <test verbose="2" preserve-order="true" name="TestJZDT">
-
  <classes>
 <class name="com.test.testSuite.Login" >
      <methods>
@@ -19,6 +21,8 @@
              <include name = "testDataBrowseFolder"/>
              <include name = "testSelectDataTypeAndAreaMeasureInDataQueryFolder"/>
              <include name = "testConditionQueryAndLocate"/>
+             <include name = "testDataUpdateUploadFile"/>
+             <include name = "testDataRecover"/>
              <include name = "testSelectDataTypeAndMeasureInDataExport"/>
              <include name = "testInputRoadNameAndLocateInDataExport"/>
              <include name = "testAddUserFiledNotNull"/>
@@ -27,8 +31,10 @@
              <include name = "testInputKeywordAndSearchUser"/>
              <include name = "testSelectFromDropListAndSearchUser"/>
              <include name = "testEditUser"/>
+             <include name = "testUserNameNotAllowedDuplicate"/>
              <include name = "testDeleteUser"/>
              <include name = "testAddRolePass"/>
+             <include name = "testRoleNameFieldVerify"/>
              <include name = "testInputKeywordAndSearchRole"/>
              <include name = "testSelectFromDropListAndSearchRole"/>
              <include name = "testEditRole"/>
@@ -40,7 +46,6 @@
              <include name = "testSelectFromDropListAndSearchDept"/>
              <include name = "testEditDept"/>
              <include name = "testDeleteDept"/>
-
          </methods>
      </class>
 </classes>
