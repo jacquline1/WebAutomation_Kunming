@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a58b2d00-96b1-43d6-b84f-6d6f906e6088" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/basic/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/basic/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a58b2d00-96b1-43d6-b84f-6d6f906e6088" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,7 +93,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testNG.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="22">
               <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
             </state>
           </provider>
@@ -261,7 +253,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548836213690" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548839313163" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -422,7 +414,7 @@
       <workItem from="1548378472233" duration="12964000" />
       <workItem from="1548637690541" duration="27229000" />
       <workItem from="1548723827147" duration="28617000" />
-      <workItem from="1548809294580" duration="23698000" />
+      <workItem from="1548809294580" duration="24298000" />
     </task>
     <servers />
   </component>
@@ -459,10 +451,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293290000" />
+    <option name="totallyTimeSpent" value="293890000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-19" y="0" width="1936" height="1056" extended-state="0" />
+    <frame x="-19" y="0" width="1936" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7269303" visible="true" weight="0.20042644" />
@@ -474,7 +466,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.35357916" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.35357916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -834,7 +826,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testNG.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="22">
           <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
         </state>
       </provider>
