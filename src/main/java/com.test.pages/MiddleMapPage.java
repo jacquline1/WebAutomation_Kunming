@@ -5,7 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import java.io.IOException;
 
@@ -147,6 +146,36 @@ public class MiddleMapPage {
         select.selectByValue(value);
         return select.getFirstSelectedOption().getText();
     }
+    //统计指标
+    public static WebElement queryType(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var queryType ="
+                + "document.querySelectorAll('select#query_item_type')[0];" + "return queryType");
+         Functions.highlight(driver,element);
+        return element;
+    }
+    //从下拉列表中选择统计类型
+    public static String  selectQueryTypeFromDropList(WebDriver driver,String value){
+        Select select = new Select(queryType(driver));
+        select.selectByValue(value);
+        return select.getFirstSelectedOption().getText();
+    }
+    //统计按钮
+    public static WebElement statisticBtn(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var statisticBtn ="
+                + "document.querySelectorAll('button#statis-btn')[0];" + "return statisticBtn");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //统计结果的窗口标题
+    public static WebElement statisticWin(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var statisticWin ="
+                + "document.querySelectorAll('span#dataType')[0];" + "return statisticWin");
+        Functions.highlight(driver,element);
+        return element;
+    }
     // 图层管理
     public static WebElement layerManagement(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -188,7 +217,7 @@ public class MiddleMapPage {
         return element;
     }
     //放大
-    public static WebElement max(WebDriver driver){
+    public static WebElement enlarge(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         element    = (WebElement) js.executeScript("var max ="
                 + "document.querySelectorAll('#layer > ul > li:nth-child(4)')[0];" + "return max");
@@ -196,10 +225,26 @@ public class MiddleMapPage {
         return element;
     }
     //缩小
-    public static WebElement min(WebDriver driver){
+    public static WebElement narrow(WebDriver driver){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         element    = (WebElement) js.executeScript("var min ="
                 + "document.querySelectorAll('#layer > ul > li:nth-child(5)')[0];" + "return min");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //复位
+    public static WebElement restore(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var restore ="
+                + "document.querySelectorAll('#layer > ul > li:nth-child(6)')[0];" + "return restore");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //自定义选择
+    public static WebElement customSelect(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var customSelect ="
+                + "document.querySelectorAll('#layer > ul > li:nth-child(7)')[0];" + "return customSelect");
         Functions.highlight(driver,element);
         return element;
     }

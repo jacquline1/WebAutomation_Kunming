@@ -1,0 +1,12 @@
+com\test\pages\LoginPage.class
+com\test\pages\UserManagePage.class
+com\test\testSuite\TestCases.class
+com\test\basic\Functions.class
+com\test\pages\MiddleMapPage.class
+com\test\basic\BrowserEngine.class
+com\test\basic\OpenBrowser.class
+com\test\basic\Table.class
+com\test\pages\DataUpdateWindowPage.class
+com\test\testSuite\Login.class
+com\test\pages\LeftNavigationPage.class
+com\test\actions\LoginAction.class

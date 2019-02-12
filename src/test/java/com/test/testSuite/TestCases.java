@@ -1,4 +1,4 @@
-package com.test.testSuite;
+package test.java.com.test.testSuite;
 
 import com.test.actions.LoginAction;
 import com.test.basic.Functions;
@@ -9,7 +9,6 @@ import com.test.pages.MiddleMapPage;
 import com.test.pages.UserManagePage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -19,8 +18,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
+import java.util.Calendar;
 
 import static org.testng.Assert.assertEquals;
 public class TestCases {
@@ -33,13 +32,13 @@ public class TestCases {
         new LoginAction(driver).Login("chen","000000");
         Thread.sleep(1000);
     }
-    //@AfterClass
+    @AfterClass
     public void tearDown(){
         MiddleMapPage.exitBtn(driver).click();
         driver.quit();
     }
     /**
-     * 数据浏览-》 道路设施数据,输入路名并定位
+     *    数据浏览-》 道路设施数据,输入路名并定位
      */
     @Test
     public void testInputRoadNameAndLocate() throws InterruptedException {
@@ -52,7 +51,7 @@ public class TestCases {
     }
 
     /**
-     * 数据浏览 -》宏观仿真路网，选择数据版本
+     *    数据浏览 -》宏观仿真路网，选择数据版本
      * 0：现状路网  1：规划路网
      */
     @Test
@@ -86,12 +85,11 @@ public class TestCases {
     }
 
     /**
-     * 查询统计 -》单体属性查询页面，选择数据类型版本后进行面积测量
+     *    查询统计 -》单体属性查询页面，选择数据类型版本后进行面积测量
      */
     @Test
-    public void testSelectDataTypeAndAreaMeasureInDataQueryFolder() throws InterruptedException, IOException {
+    public void testSelectDataTypeAndAreaMeasureInDataQueryFolder() throws IOException {
         //查询统计,点击.
-        Thread.sleep(10);
         LeftNavigationPage.clickQuery(driver);
         //查询统计 ->> 单体属性查询，选择数据版本
         LeftNavigationPage.query_danti(driver).click();
@@ -104,7 +102,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 查询统计 -》条件查询页面，输入查询条件后，在查询结果中定位
+     *    查询统计 -》条件查询页面，输入查询条件后，在查询结果中定位
      */
     @Test
     public void testConditionQueryAndLocate() throws InterruptedException {
@@ -131,7 +129,53 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 数据更新，上传数据更新文件
+     *    查询统计 -》自定义范围，选择数据类型和统计指标进行统计
+     */
+    @Test
+    public void testCustomQueryAndStatistics(){
+        LeftNavigationPage.clickQuery(driver);
+        //查询统计 ->> 自定义范围，选择数据版本
+        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.query_custom(driver))).click();
+        MiddleMapPage.switchFrame(driver);
+        String selectedText =  MiddleMapPage.selectFromDataTypeList(driver,"3");
+        Assert.assertEquals(selectedText,"公交设施数据");
+       //选择统计指标
+        String selectedType = MiddleMapPage.selectQueryTypeFromDropList(driver,"2");
+        Assert.assertEquals(selectedType,"线路长度");
+        MiddleMapPage.statisticBtn(driver).click();
+        Assert.assertEquals(MiddleMapPage.statisticWin(driver).getText(),"公交设施指标");
+        driver.switchTo().defaultContent();
+    }
+    /**
+     *    查询统计 -》自定义范围，放大，缩小及复位，自定义选择
+     */
+    @Test
+    public void testEnlargeAndNarrowMap() throws AWTException, IOException, InterruptedException {
+        LeftNavigationPage.clickQuery(driver);
+        //查询统计 ->> 自定义范围
+        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.query_custom(driver))).click();
+        MiddleMapPage.switchFrame(driver);
+        //放大操作
+        MiddleMapPage.enlarge(driver).click();
+        Functions.mouseMove(1000,500,1100,800);
+        Functions.getScreenShot("d:\\screenShots\\" ,"enLarged.png");
+        //缩小操作
+        MiddleMapPage.narrow(driver).click();
+        Functions.mouseMove(1000,500,1100,800);
+        Functions.getScreenShot("d:\\screenShots\\" ,"narrowed.png");
+        MiddleMapPage.narrow(driver).click();
+        //复位
+        MiddleMapPage.restore(driver).click();
+        Functions.getScreenShot("d:\\screenShots\\" ,"restored.png");
+        //自定义选择
+        MiddleMapPage.customSelect(driver).click();
+        Functions.mouseMove(1000,500,1100,800);
+        Functions.getScreenShot("d:\\screenShots\\" ,"calc.png");
+       // Assert.assertTrue( wait.until(ExpectedConditions.visibilityOf(MiddleMapPage.statisticWin(driver))).isDisplayed());
+        driver.switchTo().defaultContent();
+    }
+    /**
+     *     数据更新，上传数据更新文件
      */
     @Test
     public void testDataUpdateUploadFile() throws IOException, InterruptedException, AWTException {
@@ -150,17 +194,18 @@ public class TestCases {
         DataUpdateWindowPage.importBtn(driver).click();
         wait.until(ExpectedConditions.alertIsPresent());
         Functions.acceptAlertViaRobot();
-
+        driver.switchTo().defaultContent();
     }
     /**
-     * 数据更新-》数据恢复
+     *    数据更新-》数据恢复
      */
     @Test
     public void testDataRecover() throws InterruptedException, AWTException {
-        LeftNavigationPage.clickDataUpdate(driver);
+       // LeftNavigationPage.clickDataUpdate(driver);
         Thread.sleep(3000);
         //数据更新 -》数据更新
-        LeftNavigationPage.dataUpdate_recover(driver).click();
+        wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.dataUpdate_recover(driver))).click();
+
         MiddleMapPage.switchFrame(driver);
         //定位回滚按钮
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -174,7 +219,7 @@ public class TestCases {
         Assert.assertEquals("没有找到匹配的记录",UserManagePage.noResult(driver).getText());
     }
     /**
-     *数据导出 -》全部导出页面，选择数据类型版本后进行长度测量
+     *   数据导出 -》全部导出页面，选择数据类型版本后进行长度测量
      */
     @Test
     public void testSelectDataTypeAndMeasureInDataExport() throws IOException {
@@ -190,7 +235,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 数据导出 -》自定义范围导出,输入路名并定位
+     *    数据导出 -》自定义范围导出,输入路名并定位
      */
     @Test
     public void testInputRoadNameAndLocateInDataExport(){
@@ -202,7 +247,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 权限管理 -》 添加用户，验证必填字段不能为空
+     *    权限管理 -》 添加用户，验证必填字段不能为空
      */
     @Test
     public void testAddUserFiledNotNull(){
@@ -216,7 +261,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 添加用户，验证必填字段的字符长度
+     *    添加用户，验证必填字段的字符长度
      */
     @Test
     public void testAddUserFieldLength(){
@@ -229,7 +274,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 成功添加用户
+     *    成功添加用户
      */
     @Test
     @Parameters({"realName","userName"})
@@ -245,7 +290,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 按输入的内容查询用户
+     *    按输入的内容查询用户
      */
     @Test
     public void testInputKeywordAndSearchUser(){
@@ -254,7 +299,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 从用户下拉列表中选择，查询用户
+     *    从用户下拉列表中选择，查询用户
      */
     @Test
     public void testSelectFromDropListAndSearchUser() throws InterruptedException {
@@ -272,7 +317,7 @@ public class TestCases {
     }
 
     /**
-     * 编辑用户
+     *    编辑用户
      */
     @Test
     public void testEditUser() throws InterruptedException, AWTException {
@@ -295,7 +340,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 用户名不允许重复
+     *    用户名不允许重复
      */
     @Test @Parameters({"realName","userName"})
     public void testUserNameNotAllowedDuplicate(String realName,String userName) throws InterruptedException {
@@ -314,7 +359,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 删除用户
+     *    删除用户
      */
     @Test
     public void testDeleteUser() throws InterruptedException {
@@ -343,7 +388,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     *添加角色
+     *   添加角色
      */
     @Test @Parameters("roleName")
     public void testAddRolePass(String roleName) throws InterruptedException {
@@ -353,7 +398,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 添加角色，字段名称验证
+     *    添加角色，字段名称验证
      */
     @Test @Parameters("roleName")
     public void testRoleNameFieldVerify(String roleName) {
@@ -372,7 +417,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 按输入的关键字，查询角色
+     *    按输入的关键字，查询角色
      */
     @Test @Parameters("roleName")
     public void testInputKeywordAndSearchRole(String roleName){
@@ -381,7 +426,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 从下拉列表中选择，查询角色
+     *    从下拉列表中选择，查询角色
      */
     @Test
     public void testSelectFromDropListAndSearchRole(){
@@ -394,7 +439,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 编辑角色
+     *    编辑角色
      */
     @Test
     public void testEditRole() throws InterruptedException {
@@ -414,7 +459,7 @@ public class TestCases {
     }
 
     /**
-     *用户角色页面，分页功能验证
+     *   用户角色页面，分页功能验证
      */
     @Test
     public void testFenYeInUserRole() throws AWTException, InterruptedException {
@@ -422,11 +467,11 @@ public class TestCases {
         WebElement table = driver.findElement(By.id("table"));
         int rowNo = new Table(table).getRowCount()-1;
         while (rowNo<10){
-            UserManagePage.addRole(driver,"role"+ rowNo);
+            UserManagePage.addRole(driver,"role"+ Calendar.getInstance().get(Calendar.MINUTE));
             Functions.acceptAlertViaRobot();
             rowNo = new Table(table).getRowCount()-1;
         }
-        UserManagePage.addRole(driver,"role"+ rowNo+1);
+        UserManagePage.addRole(driver,"role"+ Calendar.getInstance().get(Calendar.MINUTE));
         Functions.acceptAlertViaRobot();
         //点击第2页
         UserManagePage.secondPage(driver).click();
@@ -444,12 +489,11 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 删除角色
+     *    删除角色
      */
     @Test
     public void testDeleteRole() throws InterruptedException {
         UserManagePage.goToRoleManagePage(driver);
-        //删除前的总数 WebElement table = driver.findElement(By.id("table"));int beforeDelete = new Table(table).getRowCount();System.out.println("删除前的总数：" + beforeDelete);
         //要删除的角色名
         String toDelete = new Table(driver).getCellText("//*[@id=\"table\"]/tbody",9,3);
         //String toDelete = driver.findElement(By.xpath("//*[@id=\"table\"]/tbody/tr[8]/td[3]")).getText();
@@ -473,7 +517,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 添加部门
+     *    添加部门
      */
     @Test @Parameters({"deptName","parentName"})
     public void testAddDept(String deptName,String parentName) throws InterruptedException {
@@ -486,7 +530,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 添加部门，部门名称字段验证
+     *    添加部门，部门名称字段验证
      */
     @Test @Parameters({"deptName","parentName"})
     public void testVerifyDeptNameField(String deptName,String parentName) throws InterruptedException {
@@ -515,7 +559,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 按输入的关键字，查询部门
+     *    按输入的关键字，查询部门
      */
     @Test @Parameters("deptName")
     public void testInputKeywordAndSearchDept(String deptName) throws InterruptedException {
@@ -534,19 +578,17 @@ public class TestCases {
         UserManagePage.deptDropList(driver).click();
         Functions.highlight(driver,UserManagePage.deptDropList(driver));
         UserManagePage.searchByClickDropList(driver,UserManagePage.itemOfDeptList(driver));
-        wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(UserManagePage.totalRecord(driver)));
         Assert.assertEquals("显示第 1 到第 1 条记录，总共 1 条记录",UserManagePage.totalRecord(driver).getText());
         driver.switchTo().defaultContent();
-
     }
     /**
-     * 编辑部门
+     *    编辑部门
      */
     @Test
     public void testEditDept() throws InterruptedException {
         UserManagePage.goToDeptManagePage(driver);
-        //定位编辑按钮：表格的第 4 行第 6 列的单元格内
+        //定位编辑按钮：表格记录的第 4 行第 6 列的单元格内
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = (WebElement) js.executeScript("var editBtn ="
                 + "document.querySelectorAll('tr:nth-child(4) > td:nth-child(6) > a.edit.ml10')[0];" + "return editBtn");
@@ -559,7 +601,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     * 删除部门
+     *    删除部门
      */
     @Test
     public void testDeleteDept() throws InterruptedException {
@@ -570,7 +612,7 @@ public class TestCases {
         //定位删除按钮：表格的第 5 行第 6 列的单元格内
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement removeBtn = (WebElement) js.executeScript("var removeBtn ="
-                + "document.querySelectorAll('tr:nth-child(5) > td:nth-child(6) > a.remove.ml10')[0];" + "return removeBtn");
+                + "document.querySelectorAll('tr:nth-child(4) > td:nth-child(6) > a.remove.ml10')[0];" + "return removeBtn");
         wait.until(ExpectedConditions.elementToBeClickable(removeBtn)).click();
         // 取消删除
         Functions.dismissAlert(driver);
@@ -584,54 +626,7 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
 
-    @Test(enabled = false)
-    public void locateTable(){
-        UserManagePage.goToUserManagePage(driver);
-        WebElement table = driver.findElement(By.id("table"));
-        Functions.highlight(driver,table);
-        // new Table(table).printContentsInTable();
-        // System.out.println("cell:" + new Table(driver).getCellText("//*[@id='table']/tbody",2,2));
-    }
 
-    @Test(enabled = false)
-    public void TestDemo() throws InterruptedException, IOException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        //数据更新 -》数据恢复
-        WebElement dataUpdate_recover = (WebElement) js.executeScript("var dataUpdate_recover ="
-                + "document.querySelectorAll('div.no h2')[8];" + "return dataUpdate_recover");
-        //dataUpdate_recover.click();
-        System.out.println("dataUpdate_recover text:" + dataUpdate_recover.getText());
-    }
-    @Test(enabled = false)
-    public void testJavaScriptCalls() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://www.baidu.com");
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        String title = (String) js.executeScript("return document.title");
-        assertEquals("百度一下，你就知道", title);
-        long links = (Long) js.executeScript(
-                "var links = "
-                        + "document.getElementsByTagName('A'); "
-                        + "return links.length");
-        System.out.println("links" + links);
-        assertEquals(33, links);
-
-//        WebElement bd = (WebElement) js.executeScript("var bd ="
-//                + "document.getElementById('kw');"
-//                + "return bd");
-//        bd.sendKeys("abc");
-WebElement inputBox = driver.findElement(By.id("'kw'"));
-        js.executeScript("$(arguments[0]).fadeOut();", inputBox);
-        inputBox.sendKeys("abc");
-    }
-    @Test(enabled = false)
-    public void testBaiduMap(){
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://map.baidu.com/");
-        driver.findElement(By.cssSelector("#sole-input")).sendKeys("中关村");
-        driver.findElement(By.id("search-button")).click();
-
-    }
 
 
 }

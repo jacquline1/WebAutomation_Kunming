@@ -2,8 +2,16 @@ package com.test.basic;
 
 import org.openqa.selenium.*;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Rectangle;
+import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
 
 public class Functions {
     public static void highlight(WebDriver diver, WebElement element) {
@@ -34,6 +42,29 @@ public class Functions {
         robot.keyPress(KeyEvent.VK_SPACE);
         robot.keyRelease(KeyEvent.VK_SPACE);
         Thread.sleep(4000);
+    }
+    public static void mouseMove(int fromX,int fromY,int toX,int toY) throws AWTException {
+        Robot robot = new Robot();
+        robot.setAutoDelay(1000);
+        robot.mouseMove(fromX,fromY);
+        robot.mousePress(InputEvent.BUTTON1_MASK);
+        robot.mouseMove(toX,toY);
+        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+    }
+    public static void getScreenShot(String filePath,String fileName) throws AWTException, IOException {
+        Robot robot = new Robot();
+        //设置Robot产生一个动作后的休眠时间,否则执行过快
+        robot.setAutoDelay(1000);
+        //获取屏幕分辨率
+        Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+        System.out.println(d);
+        //以屏幕的尺寸创建个矩形
+        Rectangle screenRect = new Rectangle(d);
+        //截图（截取整个屏幕图片）
+        BufferedImage bufferedImage = robot.createScreenCapture(screenRect);
+        //保存截图
+        File file = new File(filePath + new Date().getTime() + fileName);
+        ImageIO.write(bufferedImage, "png", file);
     }
 
 //    public static void alertAccept1() {

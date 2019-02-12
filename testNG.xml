@@ -21,8 +21,8 @@
              <include name = "testDataBrowseFolder"/>
              <include name = "testSelectDataTypeAndAreaMeasureInDataQueryFolder"/>
              <include name = "testConditionQueryAndLocate"/>
-             <include name = "testDataUpdateUploadFile"/>
-             <include name = "testDataRecover"/>
+             <include name = "testCustomQueryAndStatistics"/>
+             <include name = "testEnlargeAndNarrowMap"/>
              <include name = "testSelectDataTypeAndMeasureInDataExport"/>
              <include name = "testInputRoadNameAndLocateInDataExport"/>
              <include name = "testAddUserFiledNotNull"/>
@@ -46,6 +46,8 @@
              <include name = "testSelectFromDropListAndSearchDept"/>
              <include name = "testEditDept"/>
              <include name = "testDeleteDept"/>
+             <include name = "testDataUpdateUploadFile"/>
+             <include name = "testDataRecover"/>
          </methods>
      </class>
 </classes>

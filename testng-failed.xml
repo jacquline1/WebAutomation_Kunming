@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <parameter name="realName" value="test1"/>
+  <parameter name="deptName" value="testDept"/>
+  <parameter name="parentName" value="testSpon"/>
+  <parameter name="roleName" value="roleName"/>
+  <parameter name="userName" value="test1"/>
+  <test thread-count="5" name="TestJZDT(failed)" parallel="classes">
+    <classes>
+      <class name="com.test.testSuite.TestCases">
+        <methods>
+          <include name="testDeleteDept"/>
+          <include name="setUP"/>
+          <include name="testDataRecover"/>
+          <include name="testDataUpdateUploadFile"/>
+        </methods>
+      </class> <!-- com.test.testSuite.TestCases -->
+    </classes>
+  </test> <!-- TestJZDT(failed) -->
+</suite> <!-- Failed suite [Suite] -->

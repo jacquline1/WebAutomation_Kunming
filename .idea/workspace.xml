@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a58b2d00-96b1-43d6-b84f-6d6f906e6088" name="Default Changelist" comment="" />
+    <list default="true" id="a58b2d00-96b1-43d6-b84f-6d6f906e6088" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/test/basic/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/basic/Functions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/actions/LoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/actions/LoginAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/basic/BrowserEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/basic/BrowserEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/basic/Functions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/basic/Functions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/basic/OpenBrowser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/basic/OpenBrowser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/basic/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/basic/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/pages/DataUpdateWindowPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/pages/DataUpdateWindowPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/pages/LeftNavigationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/pages/LeftNavigationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/pages/MiddleMapPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/pages/MiddleMapPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/pages/UserManagePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/test/pages/UserManagePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/JZ.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/testSuite/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/testSuite/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/test/testSuite/TestCases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/test/testSuite/TestCases.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,22 +39,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="325" column="70" lean-forward="true" selection-start-line="325" selection-start-column="46" selection-end-line="325" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="222" column="23" lean-forward="true" selection-start-line="222" selection-start-column="23" selection-end-line="222" selection-end-column="23" />
+            <state relative-caret-position="150">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,38 +50,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="158" column="31" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="31" />
-              <folding>
-                <element signature="method#testDataUpdate#0;class#TestCases#0" />
-                <element signature="method#locateTable#0;class#TestCases#0" />
-                <element signature="method#testJavaScriptCalls#0;class#TestCases#0" />
-                <element signature="method#testBaiduMap#0;class#TestCases#0" />
-              </folding>
+            <state relative-caret-position="446">
+              <caret line="628" column="3" selection-start-line="628" selection-start-column="3" selection-end-line="628" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/LeftNavigationPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="-4975">
+              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/basic/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="41" column="71" lean-forward="true" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
+            <state relative-caret-position="850">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,11 +83,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testNG.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+            <state relative-caret-position="1225">
+              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -127,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Login.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/testCases/Demo.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/testCases/Login.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/basic/ClickOnElement.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/cases/Login.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/cases/Demo.java" />
@@ -141,13 +151,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com.test.pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/basic/OpenBrowser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.test.pages/LeftNavigationPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/basic/Functions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/basic/Table.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" />
+        <option value="$PROJECT_DIR$/test-output/build.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/basic/Functions.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" />
         <option value="$PROJECT_DIR$/testNG.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" />
       </list>
     </option>
   </component>
@@ -159,11 +171,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,6 +207,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kunMingJiaoTong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JZ" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -203,6 +224,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="actions" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -212,6 +234,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="basic" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -227,6 +250,14 @@
               <item name="kunMingJiaoTong" type="b2602c69:ProjectViewProjectNode" />
               <item name="JZ" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="testConfig" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kunMingJiaoTong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JZ" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -242,24 +273,45 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kunMingJiaoTong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JZ" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kunMingJiaoTong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JZ" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="testSuite" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548839313163" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549942868911" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -284,7 +336,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestCases.testDataUpdateUploadFile">
+  <component name="RunManager" selected="TestNG.TestCases.testDeleteDept">
     <configuration name="E:/JZ/testNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JZ" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testNG.xml" />
@@ -295,6 +347,7 @@
       <option name="TEST_OBJECT" value="SUITE" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="E:\JZ" />
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
       <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
@@ -302,17 +355,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.tearDown" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.testDeleteDept" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JZ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.testSuite.*" />
+          <option name="PATTERN" value="test.java.com.test.testSuite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.test.testSuite" />
-      <option name="MAIN_CLASS_NAME" value="com.test.testSuite.TestCases" />
-      <option name="METHOD_NAME" value="tearDown" />
+      <option name="PACKAGE_NAME" value="test.java.com.test.testSuite" />
+      <option name="MAIN_CLASS_NAME" value="test.java.com.test.testSuite.TestCases" />
+      <option name="METHOD_NAME" value="testDeleteDept" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -320,17 +373,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.testDataRecover" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.testEnlargeAndNarrowMap" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JZ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.testSuite.*" />
+          <option name="PATTERN" value="test.java.com.test.testSuite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.test.testSuite" />
-      <option name="MAIN_CLASS_NAME" value="com.test.testSuite.TestCases" />
-      <option name="METHOD_NAME" value="testDataRecover" />
+      <option name="PACKAGE_NAME" value="test.java.com.test.testSuite" />
+      <option name="MAIN_CLASS_NAME" value="test.java.com.test.testSuite.TestCases" />
+      <option name="METHOD_NAME" value="testEnlargeAndNarrowMap" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -338,17 +391,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.testDataUpdate" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.testSelectDataTypeAndAreaMeasureInDataQueryFolder" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JZ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.testSuite.*" />
+          <option name="PATTERN" value="test.java.com.test.testSuite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.test.testSuite" />
-      <option name="MAIN_CLASS_NAME" value="com.test.testSuite.TestCases" />
-      <option name="METHOD_NAME" value="testDataUpdate" />
+      <option name="PACKAGE_NAME" value="test.java.com.test.testSuite" />
+      <option name="MAIN_CLASS_NAME" value="test.java.com.test.testSuite.TestCases" />
+      <option name="METHOD_NAME" value="testSelectDataTypeAndAreaMeasureInDataQueryFolder" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -356,17 +409,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.testDataUpdateUploadFile" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.testSelectFromDropListAndSearchDept" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="JZ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.testSuite.*" />
+          <option name="PATTERN" value="test.java.com.test.testSuite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.test.testSuite" />
-      <option name="MAIN_CLASS_NAME" value="com.test.testSuite.TestCases" />
-      <option name="METHOD_NAME" value="testDataUpdateUploadFile" />
+      <option name="PACKAGE_NAME" value="test.java.com.test.testSuite" />
+      <option name="MAIN_CLASS_NAME" value="test.java.com.test.testSuite.TestCases" />
+      <option name="METHOD_NAME" value="testSelectFromDropListAndSearchDept" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -376,18 +429,18 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.E:/JZ/testNG.xml" />
-      <item itemvalue="TestNG.TestCases.tearDown" />
-      <item itemvalue="TestNG.TestCases.testDataUpdate" />
-      <item itemvalue="TestNG.TestCases.testDataRecover" />
-      <item itemvalue="TestNG.TestCases.testDataUpdateUploadFile" />
+      <item itemvalue="TestNG.TestCases.testEnlargeAndNarrowMap" />
+      <item itemvalue="TestNG.TestCases.testSelectDataTypeAndAreaMeasureInDataQueryFolder" />
+      <item itemvalue="TestNG.TestCases.testDeleteDept" />
+      <item itemvalue="TestNG.TestCases.testSelectFromDropListAndSearchDept" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestCases.testDataUpdateUploadFile" />
-        <item itemvalue="TestNG.TestCases.testDataRecover" />
-        <item itemvalue="TestNG.TestCases.testDataUpdate" />
-        <item itemvalue="TestNG.TestCases.tearDown" />
+        <item itemvalue="TestNG.TestCases.testDeleteDept" />
+        <item itemvalue="TestNG.TestCases.testSelectFromDropListAndSearchDept" />
         <item itemvalue="TestNG.E:/JZ/testNG.xml" />
+        <item itemvalue="TestNG.TestCases.testEnlargeAndNarrowMap" />
+        <item itemvalue="TestNG.TestCases.testSelectDataTypeAndAreaMeasureInDataQueryFolder" />
       </list>
     </recent_temporary>
   </component>
@@ -415,49 +468,58 @@
       <workItem from="1548637690541" duration="27229000" />
       <workItem from="1548723827147" duration="28617000" />
       <workItem from="1548809294580" duration="24298000" />
+      <workItem from="1548915656582" duration="1679000" />
+      <workItem from="1548925406214" duration="360000" />
+      <workItem from="1548990704243" duration="621000" />
+      <workItem from="1548991387758" duration="999000" />
+      <workItem from="1548992851754" duration="8850000" />
+      <workItem from="1549847514712" duration="6832000" />
+      <workItem from="1549862663533" duration="13319000" />
+      <workItem from="1549933645627" duration="5659000" />
+      <workItem from="1549940969395" duration="1705000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCases_testDataUpdate - 2019.01.30 at 15h 30m 55s.xml">
-      <configuration name="TestCases.testDataUpdate" configurationId="TestNG" />
+    <history-entry file="TestCases_testEnlargeAndNarrowMap - 2019.02.12 at 09h 43m 06s.xml">
+      <configuration name="TestCases.testEnlargeAndNarrowMap" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataUpdate - 2019.01.30 at 15h 31m 20s.xml">
-      <configuration name="TestCases.testDataUpdate" configurationId="TestNG" />
+    <history-entry file="TestCases_testEnlargeAndNarrowMap - 2019.02.12 at 10h 03m 20s.xml">
+      <configuration name="TestCases.testEnlargeAndNarrowMap" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataUpdate - 2019.01.30 at 15h 32m 26s.xml">
-      <configuration name="TestCases.testDataUpdate" configurationId="TestNG" />
+    <history-entry file="TestCases_testEnlargeAndNarrowMap - 2019.02.12 at 10h 05m 08s.xml">
+      <configuration name="TestCases.testEnlargeAndNarrowMap" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataUpdate - 2019.01.30 at 15h 33m 36s.xml">
-      <configuration name="TestCases.testDataUpdate" configurationId="TestNG" />
+    <history-entry file="E__JZ_testNG_xml - 2019.02.12 at 10h 46m 27s.xml">
+      <configuration name="E:/JZ/testNG.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataUpdate - 2019.01.30 at 15h 34m 50s.xml">
-      <configuration name="TestCases.testDataUpdate" configurationId="TestNG" />
+    <history-entry file="TestCases_testDeleteDept - 2019.02.12 at 10h 49m 29s.xml">
+      <configuration name="TestCases.testDeleteDept" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataRecover - 2019.01.30 at 16h 03m 28s.xml">
-      <configuration name="TestCases.testDataRecover" configurationId="TestNG" />
+    <history-entry file="E__JZ_testNG_xml - 2019.02.12 at 11h 11m 43s.xml">
+      <configuration name="E:/JZ/testNG.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataRecover - 2019.01.30 at 16h 07m 50s.xml">
-      <configuration name="TestCases.testDataRecover" configurationId="TestNG" />
+    <history-entry file="E__JZ_testNG_xml - 2019.02.12 at 11h 24m 27s.xml">
+      <configuration name="E:/JZ/testNG.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataUpdateUploadFile - 2019.01.30 at 16h 12m 43s.xml">
-      <configuration name="TestCases.testDataUpdateUploadFile" configurationId="TestNG" />
+    <history-entry file="E__JZ_testNG_xml - 2019.02.12 at 11h 28m 42s.xml">
+      <configuration name="E:/JZ/testNG.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataUpdateUploadFile - 2019.01.30 at 16h 14m 09s.xml">
-      <configuration name="TestCases.testDataUpdateUploadFile" configurationId="TestNG" />
+    <history-entry file="TestCases_testSelectFromDropListAndSearchDept - 2019.02.12 at 11h 31m 51s.xml">
+      <configuration name="TestCases.testSelectFromDropListAndSearchDept" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestCases_testDataUpdateUploadFile - 2019.01.30 at 16h 15m 03s.xml">
-      <configuration name="TestCases.testDataUpdateUploadFile" configurationId="TestNG" />
+    <history-entry file="TestCases_testDeleteDept - 2019.02.12 at 11h 32m 53s.xml">
+      <configuration name="TestCases.testDeleteDept" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293890000" />
+    <option name="totallyTimeSpent" value="333914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-19" y="0" width="1936" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7269303" visible="true" weight="0.20042644" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7269303" visible="true" weight="0.2196162" />
       <window_info id="Structure" order="1" sideWeight="0.27306968" side_tool="true" weight="0.18176973" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -466,7 +528,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.35357916" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.35357916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -492,88 +554,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/23.6-jre/guava-23.6-jre.jar!/com/google/common/base/Function.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#566#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/DataUpdateWindowPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/testConfig/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/actions/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/basic/OpenBrowser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/basic/BrowserEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-output/junitreports/TEST-com.test.testSuite.Login.xml" />
-    <entry file="file://$PROJECT_DIR$/test-output/junitreports/TEST-com.test.testSuite.TestCases.xml" />
-    <entry file="file://$PROJECT_DIR$/test-output/skipped.png" />
-    <entry file="file://$PROJECT_DIR$/test-output/testng.css" />
-    <entry file="file://$PROJECT_DIR$/test-output/testng-reports.js" />
-    <entry file="file://$PROJECT_DIR$/testng-reports.js" />
-    <entry file="file://$PROJECT_DIR$/test-output/index.html" />
-    <entry file="file://$PROJECT_DIR$/test-output/failed.png" />
-    <entry file="file://$PROJECT_DIR$/Suite/TestDebug.html" />
-    <entry file="file://$PROJECT_DIR$/target/classes/com/test/actions/LoginAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#674#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/old/Suite/classes.html" />
     <entry file="file://$PROJECT_DIR$/old/Suite/methods-not-run.html" />
     <entry file="file://$PROJECT_DIR$/old/Suite/reporter-output.html" />
@@ -761,20 +741,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java">
+    <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/test-output/testng-results.xsl" />
+    <entry file="file://$PROJECT_DIR$/test-output/build.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/actions/LoginAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="222" column="23" lean-forward="true" selection-start-line="222" selection-start-column="23" selection-end-line="222" selection-end-column="23" />
+        <state relative-caret-position="400">
+          <caret line="19" column="5" selection-start-line="11" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="250">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -783,8 +767,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/LeftNavigationPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="2100">
           <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0-sources.jar!/org/openqa/selenium/support/ui/Select.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0-sources.jar!/org/openqa/selenium/MutableCapabilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0-sources.jar!/org/openqa/selenium/Capabilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="466" selection-start-line="466" selection-end-line="466" />
+          <folding>
+            <element signature="e#17265#17266#0" expanded="true" />
+            <element signature="e#17318#17319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3-sources.jar!/org/testng/internal/TestMethodWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3-sources.jar!/org/testng/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="508" selection-start-line="508" selection-end-line="508" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3-sources.jar!/org/testng/SuiteRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="366" selection-start-line="366" selection-end-line="366" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3-sources.jar!/org/testng/SuiteRunnerWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="e#2607#2608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3-sources.jar!/org/testng/internal/Invoker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1076">
+          <caret line="592" selection-start-line="592" selection-end-line="592" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3-sources.jar!/org/testng/TestNG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2943">
+          <caret line="1016" selection-start-line="1016" selection-end-line="1016" />
+          <folding>
+            <element signature="e#33705#33706#0" expanded="true" />
+            <element signature="e#33740#33741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/junitreports/TEST-com.test.testSuite.Login.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -793,18 +869,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/basic/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="41" column="71" lean-forward="true" selection-start-line="41" selection-start-column="71" selection-end-line="41" selection-end-column="71" />
+        <state relative-caret-position="850">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testNG.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1225">
+          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="325" column="70" lean-forward="true" selection-start-line="325" selection-start-column="46" selection-end-line="325" selection-end-column="70" />
+        <state relative-caret-position="-4975">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -813,21 +910,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="158" column="31" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="31" />
-          <folding>
-            <element signature="method#testDataUpdate#0;class#TestCases#0" />
-            <element signature="method#locateTable#0;class#TestCases#0" />
-            <element signature="method#testJavaScriptCalls#0;class#TestCases#0" />
-            <element signature="method#testBaiduMap#0;class#TestCases#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testNG.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        <state relative-caret-position="446">
+          <caret line="628" column="3" selection-start-line="628" selection-start-column="3" selection-end-line="628" selection-end-column="3" />
         </state>
       </provider>
     </entry>
