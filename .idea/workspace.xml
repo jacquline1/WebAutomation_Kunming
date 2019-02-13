@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a58b2d00-96b1-43d6-b84f-6d6f906e6088" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/MyRetry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/MyRetryListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Suite/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Suite/testng-failed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/junitreports/TEST-com.test.testSuite.Login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/junitreports/TEST-com.test.testSuite.Login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/junitreports/TEST-com.test.testSuite.TestCases.xml" beforeDir="false" afterPath="$PROJECT_DIR$/junitreports/TEST-com.test.testSuite.TestCases.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/Suite/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/Suite/classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/Suite/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/Suite/methods-alphabetical.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/Suite/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/Suite/methods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/Suite/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/Suite/testng.xml.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/Suite/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/Suite/toc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/old/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/java/com/test/testSuite/TestCases.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/java/com/test/testSuite/TestCases.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng-failed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng-results.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -108,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1294">
-              <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+            <state relative-caret-position="469">
+              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -190,7 +171,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-19" />
     <option name="y" value="3" />
     <option name="width" value="1936" />
@@ -461,7 +442,7 @@
       <workItem from="1549933645627" duration="5659000" />
       <workItem from="1549940969395" duration="3730000" />
       <workItem from="1549951167595" duration="8501000" />
-      <workItem from="1550019446449" duration="659000" />
+      <workItem from="1550019446449" duration="898000" />
     </task>
     <servers />
   </component>
@@ -498,7 +479,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345099000" />
+    <option name="totallyTimeSpent" value="345338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-19" y="3" width="1936" height="1053" extended-state="0" />
@@ -916,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1294">
-          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+        <state relative-caret-position="469">
+          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
         </state>
       </provider>
     </entry>
