@@ -6,16 +6,18 @@
   <parameter name="parentName" value="testSpon"/>
   <parameter name="roleName" value="roleName"/>
   <parameter name="userName" value="test1"/>
-  <test thread-count="5" name="TestJZDT(failed)" parallel="classes">
+  <listeners>
+    <listener class-name="test.java.com.test.testSuite.MyRetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Test JZDT(failed)" parallel="classes">
     <classes>
       <class name="com.test.testSuite.TestCases">
         <methods>
-          <include name="testDeleteDept"/>
           <include name="setUP"/>
           <include name="testDataRecover"/>
-          <include name="testDataUpdateUploadFile"/>
+          <include name="testSelectFromDropListAndSearchUser"/>
         </methods>
       </class> <!-- com.test.testSuite.TestCases -->
     </classes>
-  </test> <!-- TestJZDT(failed) -->
+  </test> <!-- Test JZDT(failed) -->
 </suite> <!-- Failed suite [Suite] -->

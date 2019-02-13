@@ -467,11 +467,11 @@ public class TestCases {
         WebElement table = driver.findElement(By.id("table"));
         int rowNo = new Table(table).getRowCount()-1;
         while (rowNo<10){
-            UserManagePage.addRole(driver,"role"+ Calendar.getInstance().get(Calendar.MINUTE));
+            UserManagePage.addRole(driver,"role"+ rowNo);
             Functions.acceptAlertViaRobot();
             rowNo = new Table(table).getRowCount()-1;
         }
-        UserManagePage.addRole(driver,"role"+ Calendar.getInstance().get(Calendar.MINUTE));
+        UserManagePage.addRole(driver,"role"+ Calendar.getInstance().get(Calendar.SECOND));
         Functions.acceptAlertViaRobot();
         //点击第2页
         UserManagePage.secondPage(driver).click();
@@ -588,7 +588,7 @@ public class TestCases {
     @Test
     public void testEditDept() throws InterruptedException {
         UserManagePage.goToDeptManagePage(driver);
-        //定位编辑按钮：表格记录的第 4 行第 6 列的单元格内
+        //定位编辑按钮：表格数据的第 4 行第 6 列的单元格内
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = (WebElement) js.executeScript("var editBtn ="
                 + "document.querySelectorAll('tr:nth-child(4) > td:nth-child(6) > a.edit.ml10')[0];" + "return editBtn");
@@ -609,7 +609,7 @@ public class TestCases {
         //删除前的总数
         WebElement table = driver.findElement(By.id("table"));
         int beforeDelete = new Table(table).getRowCount();
-        //定位删除按钮：表格的第 5 行第 6 列的单元格内
+        //定位删除按钮：表格数据的第 4 行第 6 列的单元格内
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement removeBtn = (WebElement) js.executeScript("var removeBtn ="
                 + "document.querySelectorAll('tr:nth-child(4) > td:nth-child(6) > a.remove.ml10')[0];" + "return removeBtn");
@@ -625,8 +625,6 @@ public class TestCases {
         Assert.assertEquals(afterDelete,beforeDelete-1);
         driver.switchTo().defaultContent();
     }
-
-
 
 
 }

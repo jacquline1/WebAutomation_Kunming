@@ -6,7 +6,10 @@
     <parameter name="roleName"  value="roleName"/>
     <parameter name="deptName"  value="testDept"/>
     <parameter name="parentName"  value="testSpon"/>
-<test verbose="2" preserve-order="true" name="TestJZDT">
+    <listeners>
+        <listener class-name="test.java.com.test.testSuite.MyRetryListener"/>
+    </listeners>
+<test verbose="2" preserve-order="true" name="Test JZDT">
  <classes>
 <class name="com.test.testSuite.Login" >
      <methods>

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">31 methods, 3 failed,   28 passed</span>
+                    <span class="method-stats">34 methods, 1 failed,  3 skipped,  30 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,17 +105,31 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testDataRecover">testDataRecover</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testDataUpdateUploadFile">testDataUpdateUploadFile</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testDeleteDept">testDeleteDept</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testDataRecover">testDataRecover</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testDataRecover">testDataRecover</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testSelectFromDropListAndSearchUser">testSelectFromDropListAndSearchUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -162,6 +176,16 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testDataBrowseFolder">testDataBrowseFolder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testDataUpdateUploadFile">testDataUpdateUploadFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.test.testSuite.TestCases" hash-for-method="testDeleteDept">testDeleteDept</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -287,12 +311,99 @@
                   <a name="testDataRecover">
                   </a> <!-- testDataRecover -->
                   <span class="method-name">testDataRecover</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [org.openqa.selenium.remote.RemoteWebElement@6d7798c1 -&gt; unknown locator] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-LPMN131&apos;, ip: &apos;192.168.10.160&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\w\AppData\Local\Te...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.96, webStorageEnabled: true}
+Session ID: 38045fe94289b0d2fbfd054a0389e392
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at com.test.testSuite.TestCases.testDataRecover(TestCases.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.test.testSuite.TestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDataRecover">
+                  </a> <!-- testDataRecover -->
+                  <span class="method-name">testDataRecover</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;h2&gt;...&lt;/h2&gt; is not clickable at point (110, 271). Other element would receive the click: &lt;div id=&quot;dialog_overlay&quot; class=&quot;md-overlay md-fixed md-dialog-overlay&quot; style=&quot;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=72.0.3626.96)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-LPMN131&apos;, ip: &apos;192.168.10.160&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\w\AppData\Local\Te...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.96, webStorageEnabled: true}
+Session ID: 38045fe94289b0d2fbfd054a0389e392
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.test.testSuite.TestCases.testDataRecover(TestCases.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDataRecover">
+                  </a> <!-- testDataRecover -->
+                  <span class="method-name">testDataRecover</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [org.openqa.selenium.remote.RemoteWebElement@6d7798c1 -&gt; unknown locator] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-LPMN131&apos;, ip: &apos;192.168.10.160&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\w\AppData\Local\Te...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.96, webStorageEnabled: true}
+Session ID: 38045fe94289b0d2fbfd054a0389e392
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
 	at com.test.testSuite.TestCases.testDataRecover(TestCases.java:163)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -313,42 +424,34 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testDataUpdateUploadFile">
-                  </a> <!-- testDataUpdateUploadFile -->
-                  <span class="method-name">testDataUpdateUploadFile</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.test.testSuite.TestCases.testDataUpdateUploadFile(TestCases.java:142)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:744)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testDeleteDept">
-                  </a> <!-- testDeleteDept -->
-                  <span class="method-name">testDeleteDept</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at com.test.testSuite.TestCases.testDeleteDept(TestCases.java:575)
+                  <a name="testSelectFromDropListAndSearchUser">
+                  </a> <!-- testSelectFromDropListAndSearchUser -->
+                  <span class="method-name">testSelectFromDropListAndSearchUser</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;h2 class=&quot;&quot;&gt;...&lt;/h2&gt; is not clickable at point (110, 301). Other element would receive the click: &lt;a href=&quot;usermaintain.html&quot; target=&quot;ifbox&quot;&gt;...&lt;/a&gt;
+  (Session info: chrome=72.0.3626.96)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-LPMN131&apos;, ip: &apos;192.168.10.160&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\w\AppData\Local\Te...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.96, webStorageEnabled: true}
+Session ID: 38045fe94289b0d2fbfd054a0389e392
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.test.pages.UserManagePage.goToUserManagePage(UserManagePage.java:17)
+	at com.test.testSuite.TestCases.testSelectFromDropListAndSearchUser(TestCases.java:262)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -367,7 +470,7 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -439,6 +542,20 @@
                   <a name="testDataBrowseFolder">
                   </a> <!-- testDataBrowseFolder -->
                   <span class="method-name">testDataBrowseFolder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDataUpdateUploadFile">
+                  </a> <!-- testDataUpdateUploadFile -->
+                  <span class="method-name">testDataUpdateUploadFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDeleteDept">
+                  </a> <!-- testDeleteDept -->
+                  <span class="method-name">testDeleteDept</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -603,7 +720,10 @@
   &lt;parameter name=&quot;parentName&quot; value=&quot;testSpon&quot;/&gt;
   &lt;parameter name=&quot;roleName&quot; value=&quot;roleName&quot;/&gt;
   &lt;parameter name=&quot;userName&quot; value=&quot;test1&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;TestJZDT&quot; parallel=&quot;classes&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;test.java.com.test.testSuite.MyRetryListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Test JZDT&quot; parallel=&quot;classes&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.test.testSuite.Login&quot;&gt;
         &lt;methods&gt;
@@ -648,7 +768,7 @@
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.test.testSuite.TestCases --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TestJZDT --&gt;
+  &lt;/test&gt; &lt;!-- Test JZDT --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -660,7 +780,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TestJZDT (2 classes)</span>
+                <span class="test-name">Test JZDT (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -686,136 +806,148 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(31);
+data.addRows(34);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testDeleteRole')
+data.setCell(0, 1, 'testFenYeInUserRole')
 data.setCell(0, 2, 'com.test.testSuite.TestCases')
-data.setCell(0, 3, 13581);
+data.setCell(0, 3, 19250);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testDeleteUser')
+data.setCell(1, 1, 'testDataUpdateUploadFile')
 data.setCell(1, 2, 'com.test.testSuite.TestCases')
-data.setCell(1, 3, 12867);
+data.setCell(1, 3, 14490);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testFenYeInUserRole')
+data.setCell(2, 1, 'testDataRecover')
 data.setCell(2, 2, 'com.test.testSuite.TestCases')
-data.setCell(2, 3, 10175);
+data.setCell(2, 3, 13260);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testEditUser')
+data.setCell(3, 1, 'testDataRecover')
 data.setCell(3, 2, 'com.test.testSuite.TestCases')
-data.setCell(3, 3, 9477);
+data.setCell(3, 3, 13091);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testAddRolePass')
+data.setCell(4, 1, 'testDeleteUser')
 data.setCell(4, 2, 'com.test.testSuite.TestCases')
-data.setCell(4, 3, 7922);
+data.setCell(4, 3, 12741);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testConditionQueryAndLocate')
+data.setCell(5, 1, 'testDeleteRole')
 data.setCell(5, 2, 'com.test.testSuite.TestCases')
-data.setCell(5, 3, 7839);
+data.setCell(5, 3, 12671);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testInputRoadNameAndLocate')
+data.setCell(6, 1, 'testDeleteDept')
 data.setCell(6, 2, 'com.test.testSuite.TestCases')
-data.setCell(6, 3, 7756);
+data.setCell(6, 3, 12586);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testEditRole')
+data.setCell(7, 1, 'testEditUser')
 data.setCell(7, 2, 'com.test.testSuite.TestCases')
-data.setCell(7, 3, 7738);
+data.setCell(7, 3, 9317);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testAddUserPass')
+data.setCell(8, 1, 'testInputRoadNameAndLocate')
 data.setCell(8, 2, 'com.test.testSuite.TestCases')
-data.setCell(8, 3, 7664);
+data.setCell(8, 3, 9269);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'testAddDept')
 data.setCell(9, 2, 'com.test.testSuite.TestCases')
-data.setCell(9, 3, 7610);
+data.setCell(9, 3, 7808);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'testEditDept')
 data.setCell(10, 2, 'com.test.testSuite.TestCases')
-data.setCell(10, 3, 7436);
+data.setCell(10, 3, 7748);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'logPass')
-data.setCell(11, 2, 'com.test.testSuite.Login')
-data.setCell(11, 3, 4003);
+data.setCell(11, 1, 'testAddUserPass')
+data.setCell(11, 2, 'com.test.testSuite.TestCases')
+data.setCell(11, 3, 7411);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testVerifyDeptNameField')
+data.setCell(12, 1, 'testConditionQueryAndLocate')
 data.setCell(12, 2, 'com.test.testSuite.TestCases')
-data.setCell(12, 3, 3047);
+data.setCell(12, 3, 7349);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'testDataRecover')
+data.setCell(13, 1, 'testAddRolePass')
 data.setCell(13, 2, 'com.test.testSuite.TestCases')
-data.setCell(13, 3, 3036);
+data.setCell(13, 3, 7238);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'testDataUpdateUploadFile')
+data.setCell(14, 1, 'testEditRole')
 data.setCell(14, 2, 'com.test.testSuite.TestCases')
-data.setCell(14, 3, 3032);
+data.setCell(14, 3, 7150);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'testSelectDataTypeAndMeasureInDataExport')
-data.setCell(15, 2, 'com.test.testSuite.TestCases')
-data.setCell(15, 3, 2526);
+data.setCell(15, 1, 'logPass')
+data.setCell(15, 2, 'com.test.testSuite.Login')
+data.setCell(15, 3, 4098);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'testDataBrowseFolder')
+data.setCell(16, 1, 'testDataRecover')
 data.setCell(16, 2, 'com.test.testSuite.TestCases')
-data.setCell(16, 3, 2332);
+data.setCell(16, 3, 3116);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'testSelectDataType_HongGuan')
+data.setCell(17, 1, 'testSelectDataTypeAndMeasureInDataExport')
 data.setCell(17, 2, 'com.test.testSuite.TestCases')
-data.setCell(17, 3, 2294);
+data.setCell(17, 3, 2330);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'testSelectDataTypeAndAreaMeasureInDataQueryFolder')
+data.setCell(18, 1, 'testVerifyDeptNameField')
 data.setCell(18, 2, 'com.test.testSuite.TestCases')
-data.setCell(18, 3, 1926);
+data.setCell(18, 3, 2149);
 data.setCell(19, 0, 19)
 data.setCell(19, 1, 'testRoleNameFieldVerify')
 data.setCell(19, 2, 'com.test.testSuite.TestCases')
-data.setCell(19, 3, 1785);
+data.setCell(19, 3, 2044);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'testUserNameNotAllowedDuplicate')
+data.setCell(20, 1, 'testSelectDataTypeAndAreaMeasureInDataQueryFolder')
 data.setCell(20, 2, 'com.test.testSuite.TestCases')
-data.setCell(20, 3, 1745);
+data.setCell(20, 3, 1891);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'testAddUserFieldLength')
+data.setCell(21, 1, 'testDataBrowseFolder')
 data.setCell(21, 2, 'com.test.testSuite.TestCases')
-data.setCell(21, 3, 1582);
+data.setCell(21, 3, 1715);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'testAddUserFiledNotNull')
+data.setCell(22, 1, 'testSelectDataType_HongGuan')
 data.setCell(22, 2, 'com.test.testSuite.TestCases')
-data.setCell(22, 3, 1411);
+data.setCell(22, 3, 1563);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'testSelectFromDropListAndSearchDept')
+data.setCell(23, 1, 'testUserNameNotAllowedDuplicate')
 data.setCell(23, 2, 'com.test.testSuite.TestCases')
-data.setCell(23, 3, 1099);
+data.setCell(23, 3, 1459);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'testInputKeywordAndSearchRole')
+data.setCell(24, 1, 'testAddUserFieldLength')
 data.setCell(24, 2, 'com.test.testSuite.TestCases')
-data.setCell(24, 3, 1025);
+data.setCell(24, 3, 1281);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'testDeleteDept')
+data.setCell(25, 1, 'testAddUserFiledNotNull')
 data.setCell(25, 2, 'com.test.testSuite.TestCases')
-data.setCell(25, 3, 836);
+data.setCell(25, 3, 1196);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'testInputRoadNameAndLocateInDataExport')
+data.setCell(26, 1, 'testInputKeywordAndSearchDept')
 data.setCell(26, 2, 'com.test.testSuite.TestCases')
-data.setCell(26, 3, 714);
+data.setCell(26, 3, 973);
 data.setCell(27, 0, 27)
 data.setCell(27, 1, 'testSelectFromDropListAndSearchRole')
 data.setCell(27, 2, 'com.test.testSuite.TestCases')
-data.setCell(27, 3, 520);
+data.setCell(27, 3, 962);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'testSelectFromDropListAndSearchUser')
+data.setCell(28, 1, 'testInputRoadNameAndLocateInDataExport')
 data.setCell(28, 2, 'com.test.testSuite.TestCases')
-data.setCell(28, 3, 475);
+data.setCell(28, 3, 584);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'testInputKeywordAndSearchDept')
+data.setCell(29, 1, 'testSelectFromDropListAndSearchUser')
 data.setCell(29, 2, 'com.test.testSuite.TestCases')
-data.setCell(29, 3, 425);
+data.setCell(29, 3, 406);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'testInputKeywordAndSearchUser')
+data.setCell(30, 1, 'testSelectFromDropListAndSearchDept')
 data.setCell(30, 2, 'com.test.testSuite.TestCases')
-data.setCell(30, 3, 414);
+data.setCell(30, 3, 379);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'testInputKeywordAndSearchUser')
+data.setCell(31, 2, 'com.test.testSuite.TestCases')
+data.setCell(31, 3, 306);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'testInputKeywordAndSearchRole')
+data.setCell(32, 2, 'com.test.testSuite.TestCases')
+data.setCell(32, 3, 285);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'testSelectFromDropListAndSearchUser')
+data.setCell(33, 2, 'com.test.testSuite.TestCases')
+data.setCell(33, 3, 75);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -870,146 +1002,154 @@ return data;
               <div class="chronological-class-name">com.test.testSuite.Login</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">logPass</span>
-                <span class="method-start">10 ms</span>
+                <span class="method-start">9 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.test.testSuite.TestCases</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testInputRoadNameAndLocate</span>
-                <span class="method-start">2820 ms</span>
+                <span class="method-start">2800 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.test.testSuite.Login</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">4014 ms</span>
+                <span class="method-start">4107 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.test.testSuite.TestCases</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSelectDataType_HongGuan</span>
-                <span class="method-start">10577 ms</span>
+                <span class="method-start">12070 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDataBrowseFolder</span>
-                <span class="method-start">12872 ms</span>
+                <span class="method-start">13633 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSelectDataTypeAndAreaMeasureInDataQueryFolder</span>
-                <span class="method-start">15204 ms</span>
+                <span class="method-start">15348 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testConditionQueryAndLocate</span>
-                <span class="method-start">17130 ms</span>
+                <span class="method-start">17239 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSelectDataTypeAndMeasureInDataExport</span>
-                <span class="method-start">24970 ms</span>
+                <span class="method-start">24588 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testInputRoadNameAndLocateInDataExport</span>
-                <span class="method-start">27497 ms</span>
+                <span class="method-start">26918 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testAddUserFiledNotNull</span>
-                <span class="method-start">28211 ms</span>
+                <span class="method-start">27503 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testAddUserFieldLength</span>
-                <span class="method-start">29622 ms</span>
+                <span class="method-start">28700 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testAddUserPass(test1, test1)</span>
-                <span class="method-start">31206 ms</span>
+                <span class="method-start">29983 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testInputKeywordAndSearchUser</span>
-                <span class="method-start">38870 ms</span>
+                <span class="method-start">37395 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSelectFromDropListAndSearchUser</span>
-                <span class="method-start">39285 ms</span>
+                <span class="method-start">37702 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSelectFromDropListAndSearchUser</span>
+                <span class="method-start">37778 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testEditUser</span>
-                <span class="method-start">39760 ms</span>
+                <span class="method-start">38184 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUserNameNotAllowedDuplicate(test1, test1)</span>
-                <span class="method-start">49238 ms</span>
+                <span class="method-start">47502 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDeleteUser</span>
-                <span class="method-start">50983 ms</span>
+                <span class="method-start">48961 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testAddRolePass(roleName)</span>
-                <span class="method-start">63850 ms</span>
+                <span class="method-start">61702 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testRoleNameFieldVerify(roleName)</span>
-                <span class="method-start">71773 ms</span>
+                <span class="method-start">68941 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testInputKeywordAndSearchRole(roleName)</span>
-                <span class="method-start">73559 ms</span>
+                <span class="method-start">70986 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSelectFromDropListAndSearchRole</span>
-                <span class="method-start">74584 ms</span>
+                <span class="method-start">71272 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testEditRole</span>
-                <span class="method-start">75104 ms</span>
+                <span class="method-start">72234 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testFenYeInUserRole</span>
-                <span class="method-start">82844 ms</span>
+                <span class="method-start">79385 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDeleteRole</span>
-                <span class="method-start">93019 ms</span>
+                <span class="method-start">98635 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testAddDept(testDept, testSpon)</span>
-                <span class="method-start">106600 ms</span>
+                <span class="method-start">111306 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testVerifyDeptNameField(testDept, testSpon)</span>
-                <span class="method-start">114211 ms</span>
+                <span class="method-start">119115 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testInputKeywordAndSearchDept(testDept)</span>
-                <span class="method-start">117258 ms</span>
+                <span class="method-start">121264 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testSelectFromDropListAndSearchDept</span>
-                <span class="method-start">117683 ms</span>
+                <span class="method-start">122237 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testEditDept</span>
-                <span class="method-start">118782 ms</span>
+                <span class="method-start">122617 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testDeleteDept</span>
-                <span class="method-start">126219 ms</span>
+                <span class="method-start">130365 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testDataUpdateUploadFile</span>
-                <span class="method-start">127058 ms</span>
+                <span class="method-start">142951 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDataRecover</span>
+                <span class="method-start">157442 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testDataRecover</span>
+                <span class="method-start">170534 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testDataRecover</span>
-                <span class="method-start">130092 ms</span>
+                <span class="method-start">173651 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
