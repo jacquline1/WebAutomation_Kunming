@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <parameter name="realName" value="test1"/>
+  <parameter name="deptName" value="testDept"/>
+  <parameter name="parentName" value="testSpon"/>
+  <parameter name="roleName" value="roleName"/>
+  <parameter name="userName" value="test1"/>
+  <listeners>
+    <listener class-name="test.java.com.test.testSuite.MyRetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Test JZDT(failed)" parallel="classes">
+    <classes>
+      <class name="test.java.com.test.testSuite.TestCases">
+        <methods>
+          <include name="testSelectFromDropListAndSearchDept"/>
+          <include name="testDeleteDept"/>
+          <include name="testInputKeywordAndSearchDept" invocation-numbers="0 0 0"/>
+          <include name="setUP"/>
+          <include name="testAddDept" invocation-numbers="0 0 0"/>
+          <include name="testDataUpdateUploadFile"/>
+          <include name="testDeleteRole"/>
+          <include name="testSelectFromDropListAndSearchUser"/>
+          <include name="tearDown"/>
+          <include name="testEditDept"/>
+          <include name="testFenYeInUserRole"/>
+          <include name="testVerifyDeptNameField" invocation-numbers="0 0 0"/>
+          <include name="testEditRole"/>
+          <include name="testSelectFromDropListAndSearchRole"/>
+          <include name="testDataRecover"/>
+        </methods>
+      </class> <!-- test.java.com.test.testSuite.TestCases -->
+    </classes>
+  </test> <!-- Test JZDT(failed) -->
+</suite> <!-- Failed suite [Suite] -->

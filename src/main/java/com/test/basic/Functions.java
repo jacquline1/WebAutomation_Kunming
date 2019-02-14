@@ -46,6 +46,7 @@ public class Functions {
     public static void mouseMove(int fromX,int fromY,int toX,int toY) throws AWTException {
         Robot robot = new Robot();
         robot.setAutoDelay(1000);
+
         robot.mouseMove(fromX,fromY);
         robot.mousePress(InputEvent.BUTTON1_MASK);
         robot.mouseMove(toX,toY);

@@ -11,13 +11,13 @@
     </listeners>
 <test verbose="2" preserve-order="true" name="Test JZDT">
  <classes>
-<class name="com.test.testSuite.Login" >
+<class name="test.java.com.test.testSuite.Login" >
      <methods>
          <include name ="logPass"/>
          <include name ="afterMethod"/>
      </methods>
 </class>
-     <class name="com.test.testSuite.TestCases">
+     <class name="test.java.com.test.testSuite.TestCases">
          <methods>
              <include name = "testInputRoadNameAndLocate"/>
              <include name = "testSelectDataType_HongGuan"/>
@@ -27,7 +27,7 @@
              <include name = "testCustomQueryAndStatistics"/>
              <include name = "testEnlargeAndNarrowMap"/>
              <include name = "testSelectDataTypeAndMeasureInDataExport"/>
-             <include name = "testInputRoadNameAndLocateInDataExport"/>
+             <include name = "testInputRoadNameAndLocateAndExportData"/>
              <include name = "testAddUserFiledNotNull"/>
              <include name = "testAddUserFieldLength"/>
              <include name = "testAddUserPass"/>

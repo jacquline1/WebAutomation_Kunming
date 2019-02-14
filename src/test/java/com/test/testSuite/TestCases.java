@@ -18,10 +18,10 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.awt.*;
+import java.awt.event.InputEvent;
 import java.io.IOException;
 import java.util.Calendar;
 
-import static org.testng.Assert.assertEquals;
 public class TestCases {
     WebDriver driver = new ChromeDriver();
     WebDriverWait wait = new WebDriverWait(driver,30);
@@ -235,16 +235,27 @@ public class TestCases {
         driver.switchTo().defaultContent();
     }
     /**
-     *    数据导出 -》自定义范围导出,输入路名并定位
+     *    数据导出 -》自定义范围导出,输入路名并定位，自定义选择多边形范围并导出数据
      */
     @Test
-    public void testInputRoadNameAndLocateInDataExport(){
+    public void testInputRoadNameAndLocateAndExportData() throws IOException, InterruptedException {
         LeftNavigationPage.clickDataExport(driver);
         wait.until(ExpectedConditions.visibilityOf(LeftNavigationPage.dataExport_custom(driver))).click();
         MiddleMapPage.switchFrame(driver);
         Assert.assertEquals(MiddleMapPage.pageTitle(driver).getText(),"自定义范围导出");
         MiddleMapPage.inputRoadNameAndLocate(driver,"吴井路");
+        //导出数据
+        MiddleMapPage.customSelect(driver).click();
+        wait.until(ExpectedConditions.visibilityOf(MiddleMapPage.customMulti(driver))).click();
+        MiddleMapPage.dragAndDropInMap(driver);
+        Thread.sleep(3000);
+        MiddleMapPage.exportBtn(driver).click();
+        Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(MiddleMapPage.exportText(driver))).isDisplayed());
         driver.switchTo().defaultContent();
+    }
+    @Test
+    public void testDataExport(){
+
     }
     /**
      *    权限管理 -》 添加用户，验证必填字段不能为空

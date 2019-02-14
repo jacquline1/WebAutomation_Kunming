@@ -267,5 +267,29 @@ public class MiddleMapPage {
         Functions.highlight(driver,element);
         return element;
     }
+    //数据导出，导出按钮
+    public static WebElement exportBtn(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var exportBtn ="
+                + "document.querySelectorAll('button#export-btn')[0];" + "return exportBtn");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    // 自定义选择，多边形
+    public static WebElement customMulti(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var customMulti ="
+                + "document.querySelectorAll('#draw-management-main > ul > li:nth-child(2) > div > div')[0];" + "return customMulti");
+        Functions.highlight(driver,element);
+        return element;
+    }
+    //数据导出中的文字提示
+    public static WebElement exportText(WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        element    = (WebElement) js.executeScript("var exportText ="
+                + "document.querySelectorAll('.mloading-mask.active > div > div > span')[0];" + "return exportText");
+        Functions.highlight(driver,element);
+        return element;
+    }
 
 }

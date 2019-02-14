@@ -1,4 +1,4 @@
-package com.test.testSuite;
+package test.java.com.test.testSuite;
 
 import com.test.actions.LoginAction;
 import com.test.basic.OpenBrowser;
