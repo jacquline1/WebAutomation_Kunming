@@ -7,7 +7,9 @@
     <parameter name="deptName"  value="testDept"/>
     <parameter name="parentName"  value="testSpon"/>
     <listeners>
-        <listener class-name="test.java.com.test.testSuite.MyRetryListener"/>
+        <!--<listener class-name="test.java.com.test.testSuite.MyRetryListener"/>-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
     </listeners>
 <test verbose="2" preserve-order="true" name="Test JZDT">
  <classes>

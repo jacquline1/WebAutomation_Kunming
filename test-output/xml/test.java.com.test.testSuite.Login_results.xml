@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test JZDT"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.212">
+  <properties />
+  
+  
+            <testcase name="logPass" time="4.212" classname="test.java.com.test.testSuite.Login" />
+      
+</testsuite>

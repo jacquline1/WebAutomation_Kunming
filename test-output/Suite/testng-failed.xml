@@ -7,27 +7,44 @@
   <parameter name="roleName" value="roleName"/>
   <parameter name="userName" value="test1"/>
   <listeners>
-    <listener class-name="test.java.com.test.testSuite.MyRetryListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
   <test thread-count="5" name="Test JZDT(failed)" parallel="classes">
     <classes>
       <class name="test.java.com.test.testSuite.TestCases">
         <methods>
-          <include name="testSelectFromDropListAndSearchDept"/>
+          <include name="testEnlargeAndNarrowMap"/>
+          <include name="testInputRoadNameAndLocateAndExportData"/>
+          <include name="testUserNameNotAllowedDuplicate" invocation-numbers="0"/>
+          <include name="testConditionQueryAndLocate"/>
           <include name="testDeleteDept"/>
-          <include name="testInputKeywordAndSearchDept" invocation-numbers="0 0 0"/>
+          <include name="testDeleteUser"/>
+          <include name="testAddDept" invocation-numbers="0"/>
+          <include name="testSelectDataTypeAndAreaMeasureInDataQueryFolder"/>
+          <include name="testSelectFromDropListAndSearchUser"/>
+          <include name="testAddUserFieldLength"/>
+          <include name="testFenYeInUserRole"/>
+          <include name="testAddRolePass" invocation-numbers="0"/>
+          <include name="testAddUserFiledNotNull"/>
+          <include name="testEditRole"/>
+          <include name="testDataRecover"/>
+          <include name="testInputKeywordAndSearchUser"/>
+          <include name="testRoleNameFieldVerify" invocation-numbers="0"/>
+          <include name="testSelectFromDropListAndSearchDept"/>
+          <include name="testAddUserPass" invocation-numbers="0"/>
+          <include name="testEditUser"/>
+          <include name="testInputKeywordAndSearchDept" invocation-numbers="0"/>
           <include name="setUP"/>
-          <include name="testAddDept" invocation-numbers="0 0 0"/>
+          <include name="testInputKeywordAndSearchRole" invocation-numbers="0"/>
+          <include name="testCustomQueryAndStatistics"/>
           <include name="testDataUpdateUploadFile"/>
           <include name="testDeleteRole"/>
-          <include name="testSelectFromDropListAndSearchUser"/>
           <include name="tearDown"/>
           <include name="testEditDept"/>
-          <include name="testFenYeInUserRole"/>
-          <include name="testVerifyDeptNameField" invocation-numbers="0 0 0"/>
-          <include name="testEditRole"/>
+          <include name="testVerifyDeptNameField" invocation-numbers="0"/>
+          <include name="testSelectDataTypeAndMeasureInDataExport"/>
           <include name="testSelectFromDropListAndSearchRole"/>
-          <include name="testDataRecover"/>
         </methods>
       </class> <!-- test.java.com.test.testSuite.TestCases -->
     </classes>
