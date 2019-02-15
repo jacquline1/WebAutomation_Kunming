@@ -88,12 +88,13 @@ public class TestCases {
      *    查询统计 -》单体属性查询页面，选择数据类型版本后进行面积测量
      */
     @Test
-    public void testSelectDataTypeAndAreaMeasureInDataQueryFolder() throws IOException {
+    public void testSelectDataTypeAndAreaMeasureInDataQueryFolder() throws IOException, InterruptedException {
         //查询统计,点击.
         LeftNavigationPage.clickQuery(driver);
         //查询统计 ->> 单体属性查询，选择数据版本
         LeftNavigationPage.query_danti(driver).click();
         MiddleMapPage.switchFrame(driver);
+        Thread.sleep(2000);
         MiddleMapPage.selectFromDataTypeList(driver,"2");
         //面积测量
         MiddleMapPage.areaMeasure(driver).click();
