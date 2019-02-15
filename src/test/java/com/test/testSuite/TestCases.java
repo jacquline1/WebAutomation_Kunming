@@ -321,7 +321,7 @@ public class TestCases {
         WebElement element = (WebElement) js.executeScript("var user ="
                 + "document.querySelectorAll('#user > ul > li:nth-child(10)')[0];" + "return user");
         element.click();
-        Thread.sleep(10);
+        Thread.sleep(3000);
         wait.until(ExpectedConditions.visibilityOf(UserManagePage.totalRecord(driver)));
         Assert.assertEquals("显示第 1 到第 1 条记录，总共 1 条记录",UserManagePage.totalRecord(driver).getText());
         driver.switchTo().defaultContent();
@@ -606,7 +606,7 @@ public class TestCases {
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
         //修改信息
         wait.until(ExpectedConditions.visibilityOf(UserManagePage.deptName(driver)));
-        UserManagePage.addDept(driver,"updateName","newRespons","3");
+        UserManagePage.addDept(driver,"updateName","newRespons","-1");
         //保存后验证
         Functions.acceptAlert(driver);
         driver.switchTo().defaultContent();

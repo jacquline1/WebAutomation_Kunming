@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a58b2d00-96b1-43d6-b84f-6d6f906e6088" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Suite/Test JZDT.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Suite/Test JZDT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Suite/testng-failed.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/bullet_point.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/collapseall.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/failed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/jquery-1.7.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.test.testSuite.Login.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.test.testSuite.TestCases.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-test.java.com.test.testSuite.Login.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-test.java.com.test.testSuite.TestCases.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/navigator-bullet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/Test JZDT.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/groups.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/methods-alphabetical.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/methods-not-run.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/methods.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/reporter-output.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/testng.xml.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Suite/toc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/passed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/skipped.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-reports.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-reports.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5731">
-              <caret line="447" selection-start-line="447" selection-end-line="447" />
+            <state relative-caret-position="381">
+              <caret line="608" column="67" selection-start-line="608" selection-start-column="67" selection-end-line="608" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -76,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="121" column="23" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
+            <state relative-caret-position="156">
+              <caret line="304" column="64" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-31">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="375">
+              <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -170,15 +136,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com.test.pages/LeftNavigationPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/basic/Table.java" />
         <option value="$PROJECT_DIR$/test-output/build.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/MyRetry.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/MyRetryListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/basic/Functions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java" />
         <option value="$PROJECT_DIR$/testNG.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" />
       </list>
     </option>
   </component>
@@ -284,7 +250,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="kunmingjiaotong" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550197584860" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550199777476" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -460,14 +426,11 @@
       <workItem from="1550019446449" duration="5705000" />
       <workItem from="1550107309427" duration="4389000" />
       <workItem from="1550123098310" duration="4732000" />
-      <workItem from="1550193624115" duration="2260000" />
+      <workItem from="1550193624115" duration="3875000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="E__JZ_testNG_xml - 2019.02.14 at 10h 30m 59s.xml">
-      <configuration name="E:/JZ/testNG.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="E__JZ_testNG_xml - 2019.02.14 at 10h 51m 44s.xml">
       <configuration name="E:/JZ/testNG.xml" configurationId="TestNG" />
     </history-entry>
@@ -495,12 +458,16 @@
     <history-entry file="E__JZ_testNG_xml - 2019.02.14 at 17h 40m 54s.xml">
       <configuration name="E:/JZ/testNG.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="E__JZ_testNG_xml - 2019.02.15 at 10h 25m 17s.xml">
+      <configuration name="E:/JZ/testNG.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361526000" />
+    <option name="totallyTimeSpent" value="363141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-19" y="3" width="1936" height="1053" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7269303" visible="true" weight="0.23081024" />
       <window_info id="Structure" order="1" sideWeight="0.27306968" side_tool="true" weight="0.18176973" />
@@ -511,7 +478,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3547334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3547334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -888,23 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="121" column="23" selection-start-line="121" selection-start-column="23" selection-end-line="121" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5731">
-          <caret line="447" selection-start-line="447" selection-end-line="447" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testNG.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -914,8 +864,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="375">
+          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="304" column="64" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="608" column="67" selection-start-line="608" selection-start-column="67" selection-end-line="608" selection-end-column="67" />
         </state>
       </provider>
     </entry>

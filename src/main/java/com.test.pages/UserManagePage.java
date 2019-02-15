@@ -306,7 +306,6 @@ public class UserManagePage {
         return element;
     }
     public static void selectDeptParent(WebDriver driver,String value){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         Select select = new Select(deptParent(driver));
         select.selectByValue(value);
     }
