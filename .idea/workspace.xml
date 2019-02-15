@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a58b2d00-96b1-43d6-b84f-6d6f906e6088" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="97" column="57" lean-forward="true" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
+            <state relative-caret-position="31">
+              <caret line="318" column="30" selection-start-line="318" selection-start-column="30" selection-end-line="318" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -51,8 +50,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="304" column="64" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="64" />
+            <state relative-caret-position="181">
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/LeftNavigationPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="122" column="60" lean-forward="true" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,9 +162,9 @@
         <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/Login.java" />
         <option value="$PROJECT_DIR$/testNG.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.test.pages/MiddleMapPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java" />
       </list>
     </option>
   </component>
@@ -259,7 +270,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="kunmingjiaotong" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550200653458" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550202251136" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -435,7 +446,7 @@
       <workItem from="1550019446449" duration="5705000" />
       <workItem from="1550107309427" duration="4389000" />
       <workItem from="1550123098310" duration="4732000" />
-      <workItem from="1550193624115" duration="4972000" />
+      <workItem from="1550193624115" duration="6142000" />
     </task>
     <servers />
   </component>
@@ -472,7 +483,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364238000" />
+    <option name="totallyTimeSpent" value="365408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-19" y="3" width="1936" height="1053" extended-state="0" />
@@ -711,16 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/LeftNavigationPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0-sources.jar!/org/openqa/selenium/MutableCapabilities.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -861,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="304" column="64" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0-sources.jar!/org/openqa/selenium/support/ui/Select.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -888,10 +879,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/LeftNavigationPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="122" column="60" lean-forward="true" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.test.pages/UserManagePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/testSuite/TestCases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="97" column="57" lean-forward="true" selection-start-line="97" selection-start-column="57" selection-end-line="97" selection-end-column="57" />
+        <state relative-caret-position="31">
+          <caret line="318" column="30" selection-start-line="318" selection-start-column="30" selection-end-line="318" selection-end-column="30" />
         </state>
       </provider>
     </entry>

@@ -523,7 +523,7 @@ public class TestCases {
         Functions.acceptAlert(driver);
         //删除后的用户总数 int afterDelete = new Table(table).getRowCount();System.out.println("删除后的总数：" + afterDelete);
         UserManagePage.searchByKeyword(driver,toDelete);
-        Thread.sleep(10);
+        Thread.sleep(3000);
         //wait.until(ExpectedConditions.visibilityOf(UserManagePage.noResult(driver)));
         Assert.assertEquals("没有找到匹配的记录",UserManagePage.noResult(driver).getText());
         driver.switchTo().defaultContent();
